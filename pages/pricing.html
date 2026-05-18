@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CoSpace Pricing - Flexible workspace plans for every budget">
+    <title>Pricing - CoSpace</title>
+    <link rel="icon" type="image/png" href="../assets/brand-logo.png">
+    <link rel="stylesheet" href="../src/input.css">
+    <script src="../src/layout.js" defer></script>
+</head>
+<body class="bg-white dark:bg-slate-900">
+    <a href="#main" class="sr-only focus:not-sr-only">Skip to main</a>
+    
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800 shadow-sm">
+        <div class="container-custom flex items-center justify-between h-16">
+            <a href="../" class="flex items-center gap-2 focus-ring rounded-lg px-2">
+                <div class="w-8 h-8 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold">CS</span>
+                </div>
+                <span class="font-heading font-bold text-xl hidden sm:block">CoSpace</span>
+            </a>
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 focus-ring" aria-label="Toggle dark mode">
+                    <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.536l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.828-2.828a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm.707-7.071a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM9 4a1 1 0 011 1v1a1 1 0 11-2 0V5a1 1 0 011-1zm0 12a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4.536-1.464a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM4 11a1 1 0 110 2 1 1 0 010-2zm0-4a1 1 0 110 2 1 1 0 010-2z" clip-rule="evenodd"></path></svg>
+                </button>
+                <a href="login.html" class="btn btn-primary btn-sm">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Hero -->
+        <section class="py-20 md:py-32 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+            <div class="container-custom max-w-3xl mx-auto text-center">
+                <h1 class="heading-h1 mb-6">Simple, Transparent Pricing</h1>
+                <p class="text-xl text-slate-600 dark:text-slate-300">No hidden fees. No long-term contracts. Choose the plan that fits your needs.</p>
+            </div>
+        </section>
+
+        <!-- Pricing Cards -->
+        <section class="section-padding">
+            <div class="container-custom">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+                    <!-- Plan 1: Freelancer -->
+                    <div class="card-elevated hover:shadow-2xl transition-shadow">
+                        <div class="mb-6">
+                            <h3 class="heading-h3 mb-2">Shared Desk</h3>
+                            <p class="text-slate-500">Perfect for freelancers</p>
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-5xl font-bold text-primary">$299</span>
+                            <span class="text-slate-600 dark:text-slate-400">/month</span>
+                        </div>
+                        <button class="btn btn-outline btn-lg w-full mb-6">Choose Plan</button>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center gap-2">
+                                <span class="text-primary font-bold">✓</span>
+                                <span>Access to hot desks</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-primary font-bold">✓</span>
+                                <span>High-speed WiFi</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-primary font-bold">✓</span>
+                                <span>Coffee & kitchen</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-primary font-bold">✓</span>
+                                <span>Community events</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-gray-400">✗</span>
+                                <span class="text-gray-400">Dedicated desk</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Plan 2: Teams (Popular) -->
+                    <div class="card-elevated ring-2 ring-primary relative transform scale-105 hover:shadow-2xl transition-shadow">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-white dark:bg-slate-950">
+                            <span class="badge badge-primary">MOST POPULAR</span>
+                        </div>
+                        <div class="mb-6">
+                            <h3 class="heading-h3 mb-2">Dedicated Desk</h3>
+                            <p class="text-slate-500">For growing teams</p>
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-5xl font-bold text-primary">$499</span>
+                            <span class="text-slate-600 dark:text-slate-400">/month</span>
+                        </div>
+                        <button class="btn btn-primary btn-lg w-full mb-6">Choose Plan</button>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center gap-2">
+                                <span class="text-primary font-bold">✓</span>
+                                <span>Dedicated desk</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-primary font-bold">✓</span>
+                                <span>Gigabit internet</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-primary font-bold">✓</span>
+                                <span>4 meeting hours/month</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-primary font-bold">✓</span>
+                                <span>Parking included</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-primary font-bold">✓</span>
+                                <span>Priority support</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Plan 3: Enterprise -->
+                    <div class="card-elevated hover:shadow-2xl transition-shadow">
+                        <div class="mb-6">
+                            <h3 class="heading-h3 mb-2">Private Office</h3>
+                            <p class="text-slate-500">For established teams</p>
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-5xl font-bold text-primary">Custom</span>
+                        </div>
+                        <button class="btn btn-outline btn-lg w-full mb-6">Contact Sales</button>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex items-center gap-2">
+                                <span class="text-primary font-bold">✓</span>
+                                <span>Private office space</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-primary font-bold">✓</span>
+                                <span>Unlimited meetings</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-primary font-bold">✓</span>
+                                <span>Dedicated parking</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-primary font-bold">✓</span>
+                                <span>Reception services</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-primary font-bold">✓</span>
+                                <span>24/7 access</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Comparison Table -->
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="heading-h3 text-center mb-8">Detailed Comparison</h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="border-b-2 border-gray-200 dark:border-slate-700">
+                                    <th class="text-left py-4 px-4">Feature</th>
+                                    <th class="text-center py-4 px-4">Shared</th>
+                                    <th class="text-center py-4 px-4">Dedicated</th>
+                                    <th class="text-center py-4 px-4">Private</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-100 dark:border-slate-800">
+                                    <td class="py-4 px-4">Workspace Type</td>
+                                    <td class="text-center">Hot Desk</td>
+                                    <td class="text-center">Dedicated</td>
+                                    <td class="text-center">Office</td>
+                                </tr>
+                                <tr class="border-b border-gray-100 dark:border-slate-800">
+                                    <td class="py-4 px-4">WiFi Speed</td>
+                                    <td class="text-center">High-Speed</td>
+                                    <td class="text-center">Gigabit</td>
+                                    <td class="text-center">Gigabit</td>
+                                </tr>
+                                <tr class="border-b border-gray-100 dark:border-slate-800">
+                                    <td class="py-4 px-4">Parking</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">✓</td>
+                                    <td class="text-center">Dedicated</td>
+                                </tr>
+                                <tr class="border-b border-gray-100 dark:border-slate-800">
+                                    <td class="py-4 px-4">Phone Booth</td>
+                                    <td class="text-center">✓</td>
+                                    <td class="text-center">✓</td>
+                                    <td class="text-center">✓</td>
+                                </tr>
+                                <tr class="border-b border-gray-100 dark:border-slate-800">
+                                    <td class="py-4 px-4">Meeting Rooms</td>
+                                    <td class="text-center">Pay-as-you-go</td>
+                                    <td class="text-center">4 hrs/month</td>
+                                    <td class="text-center">Unlimited</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4 px-4">24/7 Access</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">✓</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add-ons -->
+        <section class="section-padding bg-slate-50 dark:bg-slate-800">
+            <div class="container-custom max-w-4xl">
+                <h2 class="heading-h3 text-center mb-8">Add-On Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="card">
+                        <h4 class="font-bold mb-2">Event Space Rental</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-3">Host workshops, seminars, or team building events in our flexible event space.</p>
+                        <p class="text-primary font-bold">From $500/day</p>
+                    </div>
+                    <div class="card">
+                        <h4 class="font-bold mb-2">Virtual Office</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-3">Business address, mail forwarding, and meeting room access without a physical desk.</p>
+                        <p class="text-primary font-bold">$99/month</p>
+                    </div>
+                    <div class="card">
+                        <h4 class="font-bold mb-2">Private Locker</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-3">Secure storage for personal items or confidential documents.</p>
+                        <p class="text-primary font-bold">$49/month</p>
+                    </div>
+                    <div class="card">
+                        <h4 class="font-bold mb-2">Guest Passes</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-3">Bring clients or collaborators to work with you at our space.</p>
+                        <p class="text-primary font-bold">$25/day</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section-padding">
+            <div class="container-custom max-w-3xl">
+                <h2 class="heading-h2 text-center mb-12">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="card cursor-pointer">
+                        <summary class="font-bold py-2">Can I change my plan anytime?</summary>
+                        <p class="text-slate-600 dark:text-slate-400 mt-3">Yes! You can upgrade or downgrade your plan at any time. Changes take effect on your next billing cycle.</p>
+                    </details>
+                    <details class="card cursor-pointer">
+                        <summary class="font-bold py-2">Are there any setup fees?</summary>
+                        <p class="text-slate-600 dark:text-slate-400 mt-3">No setup fees! You pay only for the plan you choose, starting from day one.</p>
+                    </details>
+                    <details class="card cursor-pointer">
+                        <summary class="font-bold py-2">What's included in WiFi?</summary>
+                        <p class="text-slate-600 dark:text-slate-400 mt-3">High-speed WiFi is included in all plans. Dedicated desk and above get gigabit speeds with priority bandwidth.</p>
+                    </details>
+                    <details class="card cursor-pointer">
+                        <summary class="font-bold py-2">Do you offer discounts for annual plans?</summary>
+                        <p class="text-slate-600 dark:text-slate-400 mt-3">Yes! Contact our sales team for annual pricing options and potential discounts for long-term commitments.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section-padding bg-gradient-to-r from-primary to-primary-dark text-white text-center">
+            <div class="container-custom max-w-2xl">
+                <h2 class="heading-h2 mb-6">Ready to Get Started?</h2>
+                <p class="text-xl mb-8">Try CoSpace free for 7 days. No credit card required.</p>
+                <a href="login.html" class="btn bg-white text-primary hover:bg-gray-100 btn-lg">Start Free Trial</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12">
+        <div class="container-custom text-center">
+            <p>&copy; 2024 CoSpace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    </body>
+</html>

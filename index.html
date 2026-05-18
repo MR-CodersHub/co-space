@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Modern coworking platform - flexible office spaces for startups, freelancers, and enterprises">
+    <meta name="keywords" content="coworking, office space, flexible workspace, collaboration">
+    <meta name="theme-color" content="#14b8a6">
+    <title>CoSpace - Modern Coworking Platform</title>
+    <link rel="icon" href="./assets/images/brand-logo.png">
+    <link rel="stylesheet" href="./src/input.css">
+    <!-- Icons: Feather Icons CDN -->
+    <!-- Icons: Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./src/layout.js" defer></script>
+</head>
+
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-50">
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800 shadow-sm"
+        aria-label="Main navigation">
+        <div class="container-custom flex items-center justify-between h-16">
+            <!-- Logo -->
+            <a href="/" class="flex items-center gap-2 focus-ring rounded-lg px-2 py-1">
+                <div class="w-12 h-12 rounded-lg flex items-center justify-center"><img
+                        src="./assets/images/brand-logo.png" alt="brand-logo">
+                </div>
+                <span class="font-heading font-bold text-xl text-black dark:text-white sm:block">CoSpace</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="./index.html"
+                    class="text-primary font-semibold transition-colors">Home</a>
+                <a href="./pages/home.html"
+                    class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Home 2</a>
+                <a href="./pages/about.html"
+                    class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">About</a>
+                <a href="./pages/services.html"
+                    class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Services</a>
+                <a href="./pages/blog.html"
+                    class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Blog</a>
+                <a href="./pages/contact.html"
+                    class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Contact</a>
+            </div>
+
+            <!-- Right Side Actions -->
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle"
+                    class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors focus-ring"
+                    aria-label="Toggle dark mode" title="Toggle theme">
+                    <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.536l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.828-2.828a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm.707-7.071a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM9 4a1 1 0 011 1v1a1 1 0 11-2 0V5a1 1 0 011-1zm0 12a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4.536-1.464a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM4 11a1 1 0 110 2 1 1 0 010-2zm0-4a1 1 0 110 2 1 1 0 010-2z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+
+                <!-- Profile Dropdown -->
+                <div class="relative inline-block text-left" id="profile-dropdown-container">
+                    <button id="profile-btn"
+                        class="flex items-center justify-center w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 transition-colors focus-ring"
+                        aria-label="User profile menu" aria-haspopup="true" aria-expanded="false">
+                        <i data-lucide="user" class="w-5 h-5 text-slate-600 dark:text-slate-300"></i>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div id="profile-dropdown"
+                        class="hidden absolute right-0 mt-2 w-64 rounded-xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-xl z-50 overflow-hidden transform opacity-0 scale-95 transition-all duration-200 origin-top-right">
+                        <div
+                            class="p-3 border-b border-gray-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50">
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Welcome to CoSpace</p>
+
+                        </div>
+                        <div class="py-1.5">
+                            <a href="pages/login.html"
+                                class="flex items-center gap-3 px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors whitespace-nowrap">
+                                <i data-lucide="log-in" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+                                <span class="font-medium">Login / Sign Up</span>
+                            </a>
+                            <a href="pages/admin-dashboard.html"
+                                class="flex items-center gap-3 px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors whitespace-nowrap">
+                                <i data-lucide="shield" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+                                <span class="font-medium">Admin Dashboard</span>
+                            </a>
+                            <a href="pages/user-dashboard.html"
+                                class="flex items-center gap-3 px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors whitespace-nowrap">
+                                <i data-lucide="layout-dashboard" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+                                <span class="font-medium">User Dashboard</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 focus-ring"
+                    aria-label="Toggle menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden border-t border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-800">
+            <div class="container-custom py-4 space-y-2">
+                <a href="./index.html"
+                    class="block px-4 py-2 rounded-lg bg-gray-200 dark:bg-slate-700 text-primary font-medium transition-colors">Home</a>
+                <a href="./pages/home.html"
+                    class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Home
+                    2</a>
+                <a href="./pages/about.html"
+                    class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">About</a>
+                <a href="./pages/services.html"
+                    class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Services</a>
+                <a href="./pages/blog.html"
+                    class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Blog</a>
+                <a href="./pages/contact.html"
+                    class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Contact</a>
+
+                <div class="border-t border-gray-200 dark:border-slate-700 my-2 pt-2">
+                    <p class="px-4 py-1 text-xs font-semibold text-slate-400 uppercase tracking-wider">Account</p>
+                    <a href="./pages/login.html"
+                        class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2"><i
+                            data-lucide="log-in" class="w-4 h-4 text-slate-400"></i> Login / Sign Up</a>
+                    <a href="./pages/admin-dashboard.html"
+                        class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2"><i
+                            data-lucide="shield" class="w-4 h-4 text-slate-400"></i> Admin Dashboard</a>
+                    <a href="pages/admin-dashboard.html"
+                        class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2"><i
+                            data-lucide="layout-dashboard" class="w-4 h-4 text-slate-400"></i> User Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content">
+        <!-- HERO SECTION -->
+        <section
+            class="min-h-screen pt-16 pb-16 md:pt-24 md:pb-12 bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
+            <div class="container-custom">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Left Content -->
+                    <div class="animate-fade-in">
+                        <div class="inline-flex items-center gap-2 mb-6">
+                            <span class="badge badge-primary flex items-center gap-1.5"><i data-lucide="sparkles"
+                                    class="w-4 h-4"></i> Welcome to CoSpace</span>
+                        </div>
+                        <h1 class="heading-h1 mb-6">Your Perfect Workspace Awaits</h1>
+                        <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+                            Flexible, modern office spaces designed for productivity. Choose from hot-desks, dedicated
+                            desks, or private offices. Network with like-minded professionals in our vibrant community.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="pages/login.html" class="btn btn-primary btn-lg">Start Free Trial</a>
+                            <button onclick="document.getElementById('demo-video').scrollIntoView({behavior: 'smooth'})"
+                                class="btn btn-outline btn-lg">Watch Demo</button>
+                        </div>
+                        <div
+                            class="flex flex-col sm:flex-row gap-6 mt-10 pt-10 border-t border-gray-200 dark:border-slate-700">
+                            <div>
+                                <p class="text-3xl font-bold text-primary">500+</p>
+                                <p class="text-slate-600 dark:text-slate-400">Active Members</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-primary">50+</p>
+                                <p class="text-slate-600 dark:text-slate-400">Amenities</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-primary">15</p>
+                                <p class="text-slate-600 dark:text-slate-400">Floor Plans</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Visual -->
+                    <div class="relative h-96 md:h-full min-h-96 animate-slide-up">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-primary to-primary-dark rounded-2xl opacity-20 blur-3xl">
+                        </div>
+                        <div class="relative h-full rounded-2xl shadow-2xl overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80"
+                                alt="CoSpace Premium Coworking Workspace"
+                                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/30 mix-blend-multiply">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section id="features" class="section-padding bg-white dark:bg-slate-900">
+            <div class="container-custom">
+                <div class="text-center mb-16">
+                    <h2 class="heading-h2 mb-4">Why Choose CoSpace?</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+                        We provide everything you need for a productive and collaborative workspace environment.
+                    </p>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="card group hover:scale-105 transition-transform">
+                        <div
+                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:bg-opacity-100 transition-all">
+                            <svg class="w-6 h-6 text-primary group-hover:text-white transition-colors" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="heading-h4 mb-2">Prime Locations</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Strategically located in the heart of the city
+                            with easy access to public transport and amenities.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="card group hover:scale-105 transition-transform">
+                        <div
+                            class="w-12 h-12 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:bg-opacity-100 transition-all">
+                            <svg class="w-6 h-6 text-secondary group-hover:text-white transition-colors" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="heading-h4 mb-2">24/7 Access</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Work on your own schedule with round-the-clock
+                            access to your workspace and facilities.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="card group hover:scale-105 transition-transform">
+                        <div
+                            class="w-12 h-12 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent group-hover:bg-opacity-100 transition-all">
+                            <svg class="w-6 h-6 text-accent group-hover:text-white transition-colors" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="heading-h4 mb-2">Fully Equipped</h3>
+                        <p class="text-slate-600 dark:text-slate-400">High-speed WiFi, printing services, meeting rooms,
+                            and all the tools you need to succeed.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="card group hover:scale-105 transition-transform">
+                        <div
+                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:bg-opacity-100 transition-all">
+                            <svg class="w-6 h-6 text-primary group-hover:text-white transition-colors" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 20h5v-2a3 3 0 00-5.856-1.487M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 0a1 1 0 11-2 0 1 1 0 012 0zM5 20a3 3 0 015.856-1.487M5 10a1 1 0 11-2 0 1 1 0 012 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="heading-h4 mb-2">Community</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Network with professionals, attend events, and
+                            collaborate with like-minded individuals.</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="card group hover:scale-105 transition-transform">
+                        <div
+                            class="w-12 h-12 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:bg-opacity-100 transition-all">
+                            <svg class="w-6 h-6 text-secondary group-hover:text-white transition-colors" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="heading-h4 mb-2">Flexible Plans</h3>
+                        <p class="text-slate-600 dark:text-slate-400">From hourly passes to annual memberships - choose
+                            the plan that works best for you.</p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="card group hover:scale-105 transition-transform">
+                        <div
+                            class="w-12 h-12 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent group-hover:bg-opacity-100 transition-all">
+                            <svg class="w-6 h-6 text-accent group-hover:text-white transition-colors" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="heading-h4 mb-2">Professional Support</h3>
+                        <p class="text-slate-600 dark:text-slate-400">Dedicated support team available to assist with
+                            any needs or inquiries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLOOR PLANS SECTION -->
+        <section class="section-padding bg-slate-50 dark:bg-slate-800">
+            <div class="container-custom">
+                <div class="text-center mb-16">
+                    <h2 class="heading-h2 mb-4">Explore Our Floor Plans</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+                        Choose from our variety of office spaces designed to meet different business needs.
+                    </p>
+                </div>
+
+                <!-- Floor Plans Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Floor Plan 1 -->
+                    <div
+                        class="card-elevated group cursor-pointer transform hover:-translate-y-2 transition-transform overflow-hidden">
+                        <div class="h-48 relative mb-4 rounded-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80"
+                                alt="Ground Floor Open Workspace"
+                                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-40">
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h3 class="heading-h4 mb-2">Ground Floor</h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4">Open workspace with 50+ hot-desks,
+                                meeting areas, and networking lounge.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="badge badge-primary">50 Desks</span>
+                                <a href="#"
+                                    class="text-primary hover:text-primary-dark font-semibold transition-colors">View
+                                    →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floor Plan 2 -->
+                    <div
+                        class="card-elevated group cursor-pointer transform hover:-translate-y-2 transition-transform overflow-hidden">
+                        <div class="h-48 relative mb-4 rounded-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=600&q=80"
+                                alt="First Floor Dedicated Desks"
+                                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-40">
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h3 class="heading-h4 mb-2">First Floor</h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4">Private offices and dedicated desks with
+                                premium amenities and natural light.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="badge badge-secondary">30 Offices</span>
+                                <a href="#"
+                                    class="text-secondary hover:text-blue-600 font-semibold transition-colors">View
+                                    →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floor Plan 3 -->
+                    <div
+                        class="card-elevated group cursor-pointer transform hover:-translate-y-2 transition-transform overflow-hidden">
+                        <div class="h-48 relative mb-4 rounded-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=600&q=80"
+                                alt="Executive Floor Suites"
+                                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-40">
+                            </div>
+                        </div>
+                        <div class="px-2">
+                            <h3 class="heading-h4 mb-2">Executive Floor</h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4">Corner offices, executive suites, and
+                                dedicated conference facilities.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="badge badge-primary">15 Suites</span>
+                                <a href="#"
+                                    class="text-accent hover:text-orange-600 font-semibold transition-colors">View →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="pages/services.html" class="btn btn-secondary btn-lg">View All Floor Plans</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- AMENITIES SECTION -->
+        <section class="section-padding bg-white dark:bg-slate-900">
+            <div class="container-custom">
+                <div class="text-center mb-16">
+                    <h2 class="heading-h2 mb-4">Premium Amenities</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+                        Everything you need to work smarter, not harder.
+                    </p>
+                </div>
+
+                <!-- Amenities Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <div
+                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-primary">
+                            <i data-lucide="coffee" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-semibold mb-1">Coffee & Beverages</h4>
+                    </div>
+                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <div
+                            class="w-12 h-12 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-secondary">
+                            <i data-lucide="wifi" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-semibold mb-1">High-Speed WiFi</h4>
+                    </div>
+                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <div
+                            class="w-12 h-12 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-accent">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-semibold mb-1">Meeting Rooms</h4>
+                    </div>
+                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <div
+                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-primary">
+                            <i data-lucide="printer" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-semibold mb-1">Print Services</h4>
+                    </div>
+                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <div
+                            class="w-12 h-12 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-secondary">
+                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-semibold mb-1">Fitness Center</h4>
+                    </div>
+                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <div
+                            class="w-12 h-12 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-accent">
+                            <i data-lucide="utensils" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-semibold mb-1">Lunch Cafe</h4>
+                    </div>
+                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <div
+                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-primary">
+                            <i data-lucide="package" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-semibold mb-1">Mail Services</h4>
+                    </div>
+                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
+                        <div
+                            class="w-12 h-12 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-secondary">
+                            <i data-lucide="headphones" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="font-semibold mb-1">Phone Booths</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="section-padding bg-gradient-to-r from-primary to-primary-dark text-white">
+            <div class="container-custom text-center">
+                <h2 class="heading-h2 mb-6">Ready to Boost Your Productivity?</h2>
+                <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                    Join hundreds of professionals and companies that trust CoSpace for their workspace solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="pages/login.html" class="btn bg-white text-primary hover:bg-gray-100 btn-lg">Start Free
+                        Trial</a>
+                    <a href="pages/contact.html" class="btn btn-outline btn-lg bg-white">Contact Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION (Minimal) -->
+        <section class="section-padding bg-slate-50 dark:bg-slate-800">
+            <div class="container-custom">
+                <h2 class="heading-h2 text-center mb-16">What Our Members Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="card">
+                        <div class="flex items-center gap-1 mb-4 text-amber-400">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4 italic">"CoSpace has been a game-changer for
+                            my startup. The community alone is worth every penny."</p>
+                        <p class="font-semibold">- Sarah Johnson</p>
+                        <p class="text-sm text-slate-500">Founder, TechVenture</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center gap-1 mb-4 text-amber-400">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4 italic">"Professional facilities, great
+                            networking opportunities, and the support team is always helpful."</p>
+                        <p class="font-semibold">- Michael Chen</p>
+                        <p class="text-sm text-slate-500">Freelance Consultant</p>
+                    </div>
+                    <div class="card">
+                        <div class="flex items-center gap-1 mb-4 text-amber-400">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4 italic">"Best decision for our team. The
+                            flexibility and amenities are exactly what we needed."</p>
+                        <p class="font-semibold">- Emma Rodriguez</p>
+                        <p class="text-sm text-slate-500">CEO, Design Studio</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-white dark:bg-slate-900  text-slate-600 dark:text-slate-400 pt-16 pb-8 border-t border-gray-200 dark:border-slate-800 animate-fade-in" role="contentinfo">
+        <div class="container-custom">
+            <!-- Main Grid (4 Equal Columns) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8, mb-12">
+                
+                <!-- 1. Brand -->
+                <div class="flex flex-col space-y-6">
+                    <a href="/" class="flex items-center gap-2 px-1">
+                         <div class="w-12 h-12 rounded-lg flex items-center justify-center"><img
+                        src="./assets/images/brand-logo.png" alt="brand-logo">
+                </div>
+                        <span class="font-heading font-extrabold text-2xl text-black dark:text-white tracking-tight">CoSpace</span>
+                    </a>
+                    <p class="text-sm leading-relaxed ">
+                      An effective workplace ecosystem for your business needs.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="#" class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm" aria-label="Twitter"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm" aria-label="Facebook"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+
+                <!-- 2. Company Links -->
+                <div class="flex flex-col space-y-6">
+                    <h4 class="font-heading font-bold text-black dark:text-white text-base tracking-wide mb-2">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Home</a></li>
+                        <li><a href="pages/home.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Home 2</a></li>
+                        <li><a href="pages/about.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> About Us</a></li>
+                        <li><a href="pages/blog.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3. Support Links -->
+                <div class="flex flex-col space-y-6">
+                    <h4 class="font-heading font-bold text-black dark:text-white text-base tracking-wide mb-2">Support</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="pages/contact.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Contact Sales</a></li>
+                        <li><a href="pages/services.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Services</a></li>
+                        <li><a href="pages/pricing.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Pricing Plans</a></li>
+                        <li><a href="pages/faq.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Help & FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- 4. Contact Details -->
+                <div class="flex flex-col space-y-6">
+                    <h4 class="font-heading font-bold text-black dark:text-white text-base tracking-wide mb-2">Headquarters</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                            <span class="leading-relaxed">123 Creative Plaza, Floor 4,<br>New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-primary flex-shrink-0"></i>
+                            <span>+1 (800) 555-DESK</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-primary flex-shrink-0"></i>
+                            <a href="mailto:hello@cospace.com" class="hover:text-primary transition-colors">hello@cospace.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <p>&copy; 2026 CoSpace. All rights reserved.</p>
+                <div class="flex gap-6 font-medium">
+                    <a href="pages/privacy.html" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="pages/terms.html" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    </body>
+
+</html>

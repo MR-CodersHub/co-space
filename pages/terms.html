@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service for using the CoSpace Coworking Platform and physical coworking locations">
+    <title>Terms of Service - CoSpace</title>
+    <link rel="icon" type="image/png" href="../assets/brand-logo.png">
+    <link rel="stylesheet" href="../src/input.css">
+    <!-- Icons: Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../src/layout.js" defer></script>
+</head>
+<body class="bg-gray-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50">
+    <a href="#main" class="sr-only focus:not-sr-only">Skip to main</a>
+    
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800 shadow-sm">
+        <div class="container-custom flex items-center justify-between h-16">
+            <a href="../" class="flex items-center gap-2 focus-ring rounded-lg px-2">
+                <div class="w-8 h-8 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold">CS</span>
+                </div>
+                <span class="font-heading font-bold text-xl hidden sm:block">CoSpace</span>
+            </a>
+            
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 focus-ring" aria-label="Toggle dark mode">
+                    <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.536l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.828-2.828a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm.707-7.071a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM9 4a1 1 0 011 1v1a1 1 0 11-2 0V5a1 1 0 011-1zm0 12a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4.536-1.464a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM4 11a1 1 0 110 2 1 1 0 010-2zm0-4a1 1 0 110 2 1 1 0 010-2z" clip-rule="evenodd"></path></svg>
+                </button>
+
+                <!-- Profile Dropdown -->
+                <div class="relative inline-block text-left" id="profile-dropdown-container">
+                    <button id="profile-btn" class="flex items-center justify-center w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 transition-colors focus-ring" aria-label="User profile menu" aria-haspopup="true" aria-expanded="false">
+                        <i data-lucide="user" class="w-5 h-5 text-slate-600 dark:text-slate-300"></i>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-64 rounded-xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-xl z-50 overflow-hidden transform opacity-0 scale-95 transition-all duration-200 origin-top-right">
+                        <div class="p-3 border-b border-gray-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50">
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Welcome to CoSpace</p>
+                        </div>
+                        <div class="py-1.5">
+                            <a href="login.html" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors whitespace-nowrap">
+                                <i data-lucide="log-in" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+                                <span class="font-medium">Login / Sign Up</span>
+                            </a>
+                            <a href="admin-dashboard.html" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors whitespace-nowrap">
+                                <i data-lucide="shield" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+                                <span class="font-medium">Admin Dashboard</span>
+                            </a>
+                            <a href="user-dashboard.html" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors whitespace-nowrap">
+                                <i data-lucide="layout-dashboard" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+                                <span class="font-medium">User Dashboard</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Hero Title Banner -->
+        <section class="py-16 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 border-b border-gray-150 dark:border-slate-850">
+            <div class="container-custom">
+                <div class="max-w-4xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <h1 class="heading-h1 mb-2">Terms of Service</h1>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">Please read these terms carefully before utilizing CoSpace services.</p>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-750 px-4 py-3 rounded-xl shadow-sm text-xs font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-primary"></i>
+                        <span>Last Updated: January 01, 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terms Content Layout -->
+        <section class="py-12">
+            <div class="container-custom max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+                    
+                    <!-- Sidebar Navigation (4 cols) -->
+                    <div class="md:col-span-4">
+                        <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-gray-150 dark:border-slate-700 sticky top-24 shadow-sm">
+                            <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm uppercase tracking-wider mb-3">Table of Contents</h3>
+                            <nav class="space-y-1">
+                                <a href="#acceptance" class="block px-3 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-primary transition-colors font-medium">1. Acceptance of Terms</a>
+                                <a href="#services" class="block px-3 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-primary transition-colors font-medium">2. Description of Services</a>
+                                <a href="#membership" class="block px-3 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-primary transition-colors font-medium">3. Member Obligations</a>
+                                <a href="#conduct" class="block px-3 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-primary transition-colors font-medium">4. Rules of Conduct</a>
+                                <a href="#payments" class="block px-3 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-primary transition-colors font-medium">5. Fees and Payments</a>
+                                <a href="#liability" class="block px-3 py-2 rounded-lg text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-primary transition-colors font-medium">6. Limitation of Liability</a>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Long Documentation Column (8 cols) -->
+                    <div class="md:col-span-8 space-y-8 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+                        
+                        <!-- Section 1 -->
+                        <div id="acceptance" class="scroll-mt-24 space-y-4">
+                            <h2 class="heading-h3 text-slate-800 dark:text-slate-100 flex items-center gap-2 border-b border-gray-100 dark:border-slate-800 pb-2"><i data-lucide="check-circle" class="w-5 h-5 text-primary"></i> 1. Acceptance of Terms</h2>
+                            <p>By registering for or utilizing any workspace solutions, services, physical amenities, or digital platforms provided by CoSpace ("we," "our," or "us"), you agree to abide by and be bound by these Terms of Service. If you do not accept these terms, you must refrain from using the facilities and digital platforms.</p>
+                        </div>
+
+                        <!-- Section 2 -->
+                        <div id="services" class="scroll-mt-24 space-y-4 mt-8 md:mt-12">
+                            <h2 class="heading-h3 text-slate-800 dark:text-slate-100 flex items-center gap-2 border-b border-gray-100 dark:border-slate-800 pb-2"><i data-lucide="layers" class="w-5 h-5 text-primary"></i> 2. Description of Services</h2>
+                            <p>CoSpace provides flexible shared workspace access, dedicated workstations, private offices, high-tech conference spaces, high-speed fiber internet, and professional office facilities. Services are subject to availability and active tier limits.</p>
+                        </div>
+
+                        <!-- Section 3 -->
+                        <div id="membership" class="scroll-mt-24 space-y-4 mt-8 md:mt-12">
+                            <h2 class="heading-h3 text-slate-800 dark:text-slate-100 flex items-center gap-2 border-b border-gray-100 dark:border-slate-800 pb-2"><i data-lucide="user-check" class="w-5 h-5 text-primary"></i> 3. Member Obligations</h2>
+                            <p>To retain access to CoSpace spaces and accounts, members are required to:</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Provide accurate and complete legal registration information.</li>
+                                <li>Maintain high security for access cards, smart keys, and passwords.</li>
+                                <li>Be fully responsible for actions taken by guests brought into the premises.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Section 4 -->
+                        <div id="conduct" class="scroll-mt-24 space-y-4">
+                            <h2 class="heading-h3 text-slate-800 dark:text-slate-100 flex items-center gap-2 border-b border-gray-100 dark:border-slate-800 pb-2"><i data-lucide="activity" class="w-5 h-5 text-primary"></i> 4. Rules of Conduct</h2>
+                            <p>Members must maintain high levels of professional courtesy. Actions that disrupt daily coworking operations, constitute noise nuisances, violate secure safety protocols, or cause damage to physical property will result in immediate suspension without refund.</p>
+                        </div>
+
+                        <!-- Section 5 -->
+                        <div id="payments" class="scroll-mt-24 space-y-4">
+                            <h2 class="heading-h3 text-slate-800 dark:text-slate-100 flex items-center gap-2 border-b border-gray-100 dark:border-slate-800 pb-2"><i data-lucide="credit-card" class="w-5 h-5 text-primary"></i> 5. Fees and Payments</h2>
+                            <p>Members agree to pay all recurring charges based on selected plan tiers. Payments are charged on a monthly auto-recurring schedule. Failures to complete payment authorizations within 5 business days will result in card access lockout.</p>
+                        </div>
+
+                        <!-- Section 6 -->
+                        <div id="liability" class="scroll-mt-24 space-y-4">
+                            <h2 class="heading-h3 text-slate-800 dark:text-slate-100 flex items-center gap-2 border-b border-gray-100 dark:border-slate-800 pb-2"><i data-lucide="shield-alert" class="w-5 h-5 text-primary"></i> 6. Limitation of Liability</h2>
+                            <p>CoSpace is not liable for loss, theft, or damage to personal workspace items, laptops, or physical assets stored on our premises. We do not guarantee uninterrupted server connections or internet feeds due to grid maintenance outages.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-gradient-to-b from-slate-900 to-slate-950 text-slate-300 pt-20 pb-10 border-t border-slate-800" role="contentinfo">
+        <div class="container-custom">
+            <!-- Upper Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                <!-- Brand Description (5 cols) -->
+                <div class="md:col-span-5 space-y-6">
+                    <a href="../" class="flex items-center gap-2 px-1">
+                        <div class="w-9 h-9 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
+                            <span class="text-white font-bold text-lg">CS</span>
+                        </div>
+                        <span class="font-heading font-bold text-2xl text-white tracking-tight">CoSpace</span>
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                        Your perfect workspace solution for modern professionals. Designed to enhance collaboration, foster innovation, and scale with your business needs.
+                    </p>
+                    <!-- Social icons -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-850 hover:bg-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-400 focus-ring" aria-label="Twitter">
+                            <i data-lucide="twitter" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-850 hover:bg-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-400 focus-ring" aria-label="Instagram">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-850 hover:bg-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-400 focus-ring" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-850 hover:bg-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-400 focus-ring" aria-label="Facebook">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation Columns (4 cols) -->
+                <div class="grid grid-cols-2 md:col-span-4 gap-8">
+                    <div>
+                        <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-6">Company</h4>
+                        <ul class="space-y-3.5 text-sm">
+                            <li><a href="../index.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> Home</a></li>
+                            <li><a href="home.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> Home 2</a></li>
+                            <li><a href="about.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> About Us</a></li>
+                            <li><a href="blog.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> Blog</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-6">Support</h4>
+                        <ul class="space-y-3.5 text-sm">
+                            <li><a href="contact.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> Contact</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> Service</a></li>
+                            <li><a href="pricing.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> Pricing</a></li>
+                            <li><a href="faq.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Location/Contact Info Column (3 cols) -->
+                <div class="md:col-span-3 space-y-6">
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-6">Visit Our Space</h4>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                            <span>123 Creative Plaza, Floor 4,<br>New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-primary flex-shrink-0"></i>
+                            <span>+1 (800) 555-DESK</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-primary flex-shrink-0"></i>
+                            <span>hello@cospace.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Lower Bar -->
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-slate-500">&copy; 2024 CoSpace. All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-slate-400">
+                    <a href="privacy.html" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    </body>
+</html>

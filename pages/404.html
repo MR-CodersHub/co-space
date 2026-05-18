@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found">
+    <link rel="icon" type="image/png" href="../assets/brand-logo.png">
+    <title>404 - Page Not Found - CoSpace</title>
+    <link rel="stylesheet" href="../src/input.css">
+    <script src="../src/layout.js" defer></script>
+</head>
+<body class="bg-white dark:bg-slate-900">
+    <a href="#main" class="sr-only focus:not-sr-only">Skip to main</a>
+    
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800">
+        <div class="container-custom flex items-center justify-between h-16">
+            <a href="../" class="flex items-center gap-2 focus-ring rounded-lg px-2">
+                <div class="w-8 h-8 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold">CS</span>
+                </div>
+                <span class="font-heading font-bold text-xl hidden sm:block">CoSpace</span>
+            </a>
+            <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 focus-ring" aria-label="Toggle dark mode">
+                <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.536l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.828-2.828a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm.707-7.071a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM9 4a1 1 0 011 1v1a1 1 0 11-2 0V5a1 1 0 011-1zm0 12a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4.536-1.464a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM4 11a1 1 0 110 2 1 1 0 010-2zm0-4a1 1 0 110 2 1 1 0 010-2z" clip-rule="evenodd"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main" class="min-h-screen flex items-center justify-center py-12 px-4">
+        <div class="text-center">
+            <div class="mb-8">
+                <h1 class="text-9xl font-bold text-primary mb-4">404</h1>
+                <p class="heading-h2 mb-4">Page Not Found</p>
+                <p class="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-md mx-auto">
+                    Sorry! The page you're looking for doesn't exist or has been moved.
+                </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../" class="btn btn-primary btn-lg">Go Home</a>
+                <a href="contact.html" class="btn btn-outline btn-lg">Contact Support</a>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="mt-16 text-left max-w-md mx-auto">
+                <p class="text-slate-600 dark:text-slate-400 mb-4">Here are some helpful links:</p>
+                <ul class="space-y-2">
+                    <li><a href="../" class="text-primary hover:text-primary-dark transition-colors">→ Home</a></li>
+                    <li><a href="services.html" class="text-primary hover:text-primary-dark transition-colors">→ Services</a></li>
+                    <li><a href="pricing.html" class="text-primary hover:text-primary-dark transition-colors">→ Pricing</a></li>
+                    <li><a href="blog.html" class="text-primary hover:text-primary-dark transition-colors">→ Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    </body>
+</html>

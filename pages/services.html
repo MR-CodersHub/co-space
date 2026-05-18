@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CoSpace Services - Floor plans, meeting rooms, and amenities">
+    <title>Services & Floor Plans - CoSpace</title>
+    <link rel="icon" type="image/png" href="../assets/brand-logo.png">
+    <link rel="stylesheet" href="../src/input.css">
+    <!-- Icons: Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../src/layout.js" defer></script>
+</head>
+<body class="bg-white dark:bg-slate-900">
+    <a href="#main" class="sr-only focus:not-sr-only">Skip to main</a>
+    
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800 shadow-sm">
+        <div class="container-custom flex items-center justify-between h-16">
+            <a href="../" class="flex items-center gap-2 focus-ring rounded-lg px-2">
+                <div class="w-8 h-8 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold">CS</span>
+                </div>
+                <span class="font-heading font-bold text-xl hidden sm:block">CoSpace</span>
+            </a>
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 focus-ring" aria-label="Toggle dark mode">
+                    <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.536l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.828-2.828a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm.707-7.071a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM9 4a1 1 0 011 1v1a1 1 0 11-2 0V5a1 1 0 011-1zm0 12a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4.536-1.464a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM4 11a1 1 0 110 2 1 1 0 010-2zm0-4a1 1 0 110 2 1 1 0 010-2z" clip-rule="evenodd"></path></svg>
+                </button>
+                <a href="login.html" class="btn btn-primary btn-sm">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Hero -->
+        <section class="py-20 md:py-32 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+            <div class="container-custom">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="heading-h1 mb-6">Our Services & Floor Plans</h1>
+                    <p class="text-xl text-slate-600 dark:text-slate-300">Explore our diverse range of workspace solutions designed to fit your needs</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floor Plans Overview -->
+        <section class="section-padding">
+            <div class="container-custom">
+                <h2 class="heading-h2 text-center mb-16">Floor Plans</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                    <!-- Floor Plan 1 -->
+                    <div class="card-elevated">
+                        <div class="h-64 relative mb-6 rounded-lg overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Ground Floor Open Workspace" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-30"></div>
+                        </div>
+                        <h3 class="heading-h3 mb-4">Ground Floor</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">Open, collaborative workspace with 50+ hot desks, casual seating areas, and a vibrant community hub.</p>
+                        <div class="space-y-3 mb-6">
+                            <p class="flex items-center gap-2"><span class="badge badge-primary">50+</span> <span>Hot Desks</span></p>
+                            <p class="flex items-center gap-2"><span class="badge badge-primary">2</span> <span>Meeting Rooms</span></p>
+                            <p class="flex items-center gap-2"><span class="badge badge-primary">1</span> <span>Networking Lounge</span></p>
+                        </div>
+                        <a  href="service1.html" class="btn btn-outline  w-full">Request Tour</a>
+                    </div>
+
+                    <!-- Floor Plan 2 -->
+                    <div class="card-elevated">
+                        <div class="h-64 relative mb-6 rounded-lg overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80" alt="First Floor Premium Offices" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-30"></div>
+                        </div>
+                        <h3 class="heading-h3 mb-4">First Floor</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">Premium dedicated desks and private offices with natural light, high-speed connectivity, and dedicated support.</p>
+                        <div class="space-y-3 mb-6">
+                            <p class="flex items-center gap-2"><span class="badge badge-secondary">30</span> <span>Dedicated Desks</span></p>
+                            <p class="flex items-center gap-2"><span class="badge badge-secondary">8</span> <span>Private Offices</span></p>
+                            <p class="flex items-center gap-2"><span class="badge badge-secondary">4</span> <span>Meeting Rooms</span></p>
+                        </div>
+                        <a href="service2.html" class="btn btn-outline w-full">Request Tour</a>
+                    </div>
+
+                    <!-- Floor Plan 3 -->
+                    <div class="card-elevated">
+                        <div class="h-64 relative mb-6 rounded-lg overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80" alt="Executive Floor Premium Suites" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-30"></div>
+                        </div>
+                        <h3 class="heading-h3 mb-4">Executive Floor</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">Premium corner offices, executive suites, dedicated parking, and concierge services for discerning professionals.</p>
+                        <div class="space-y-3 mb-6">
+                            <p class="flex items-center gap-2"><span class="badge badge-primary">15</span> <span>Executive Suites</span></p>
+                            <p class="flex items-center gap-2"><span class="badge badge-primary">6</span> <span>Conference Rooms</span></p>
+                            <p class="flex items-center gap-2"><span class="badge badge-primary">VIP</span> <span>Concierge</span></p>
+                        </div>
+                        <a href="service3.html" class="btn btn-outline w-full">Request Tour</a>
+                    </div>
+
+                    <!-- Floor Plan 4 -->
+                    <div class="card-elevated">
+                        <div class="h-64 relative mb-6 rounded-lg overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=800&q=80" alt="Wellness Center Gym & Meditation" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-30"></div>
+                        </div>
+                        <h3 class="heading-h3 mb-4">Wellness Center</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">Dedicated wellness and relaxation zone with fitness facilities, meditation room, and wellness programs.</p>
+                        <div class="space-y-3 mb-6">
+                            <p class="flex items-center gap-2"><span class="badge badge-primary">Gym</span> <span>Fitness Equipment</span></p>
+                            <p class="flex items-center gap-2"><span class="badge badge-primary">Yoga</span> <span>Meditation Room</span></p>
+                            <p class="flex items-center gap-2"><span class="badge badge-primary">Classes</span> <span>Weekly Programs</span></p>
+                        </div>
+                        <a href="service4.html" class="btn btn-outline w-full">Request Tour</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Amenities Grid -->
+        <section class="section-padding bg-slate-50 dark:bg-slate-800">
+            <div class="container-custom">
+                <h2 class="heading-h2 text-center mb-16">Premium Amenities</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                    <div class="card text-center flex flex-col items-center p-6">
+                        <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-primary">
+                            <i data-lucide="coffee" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="font-semibold">Coffee & Tea</h4>
+                        <p class="text-sm text-slate-500">Premium beverages</p>
+                    </div>
+                    <div class="card text-center flex flex-col items-center p-6">
+                        <div class="w-14 h-14 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-secondary">
+                            <i data-lucide="wifi" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="font-semibold">High-Speed WiFi</h4>
+                        <p class="text-sm text-slate-500">Gigabit Internet</p>
+                    </div>
+                    <div class="card text-center flex flex-col items-center p-6">
+                        <div class="w-14 h-14 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-accent">
+                            <i data-lucide="users" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="font-semibold">Meeting Rooms</h4>
+                        <p class="text-sm text-slate-500">Fully equipped</p>
+                    </div>
+                    <div class="card text-center flex flex-col items-center p-6">
+                        <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-primary">
+                            <i data-lucide="printer" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="font-semibold">Print Services</h4>
+                        <p class="text-sm text-slate-500">Color & B&W</p>
+                    </div>
+                    <div class="card text-center flex flex-col items-center p-6">
+                        <div class="w-14 h-14 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-secondary">
+                            <i data-lucide="dumbbell" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="font-semibold">Fitness Center</h4>
+                        <p class="text-sm text-slate-500">Gym access</p>
+                    </div>
+                    <div class="card text-center flex flex-col items-center p-6">
+                        <div class="w-14 h-14 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-accent">
+                            <i data-lucide="utensils" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="font-semibold">Lunch Cafe</h4>
+                        <p class="text-sm text-slate-500">Daily menu</p>
+                    </div>
+                    <div class="card text-center flex flex-col items-center p-6">
+                        <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-primary">
+                            <i data-lucide="package" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="font-semibold">Mail Services</h4>
+                        <p class="text-sm text-slate-500">Business address</p>
+                    </div>
+                    <div class="card text-center flex flex-col items-center p-6">
+                        <div class="w-14 h-14 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-secondary">
+                            <i data-lucide="heart" class="w-7 h-7"></i>
+                        </div>
+                        <h4 class="font-semibold">Wellness</h4>
+                        <p class="text-sm text-slate-500">Yoga & meditation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meeting Room Details -->
+        <section class="section-padding">
+            <div class="container-custom">
+                <h2 class="heading-h2 text-center mb-16">Meeting & Event Spaces</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card">
+                        <h3 class="heading-h4 mb-4">The Boardroom</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">Premium conference room for executive meetings and client presentations.</p>
+                        <ul class="space-y-2 text-sm mb-6">
+                            <li><span class="text-primary font-bold mr-1">✓</span> Capacity: 12 people</li>
+                            <li><span class="text-primary font-bold mr-1">✓</span> 4K Video Conferencing</li>
+                            <li><span class="text-primary font-bold mr-1">✓</span> Premium AV Setup</li>
+                            <li><span class="text-primary font-bold mr-1">✓</span> Catering Available</li>
+                        </ul>
+                        <span class="badge badge-primary">$150/hour</span>
+                    </div>
+                    <div class="card">
+                        <h3 class="heading-h4 mb-4">The Meeting Hub</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">Flexible meeting space perfect for team collaboration and brainstorming sessions.</p>
+                        <ul class="space-y-2 text-sm mb-6">
+                            <li><span class="text-primary font-bold mr-1">✓</span> Capacity: 6 people</li>
+                            <li><span class="text-primary font-bold mr-1">✓</span> Writable Walls</li>
+                            <li><span class="text-primary font-bold mr-1">✓</span> Smart Display</li>
+                            <li><span class="text-primary font-bold mr-1">✓</span> WiFi Connected</li>
+                        </ul>
+                        <span class="badge badge-secondary">$75/hour</span>
+                    </div>
+                    <div class="card">
+                        <h3 class="heading-h4 mb-4">Focus Pods</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">Quiet, private spaces for concentrated work or confidential calls.</p>
+                        <ul class="space-y-2 text-sm mb-6">
+                            <li><span class="text-primary font-bold mr-1">✓</span> Capacity: 1-2 people</li>
+                            <li><span class="text-primary font-bold mr-1">✓</span> Noise Isolation</li>
+                            <li><span class="text-primary font-bold mr-1">✓</span> Power Outlets</li>
+                            <li><span class="text-primary font-bold mr-1">✓</span> Built-in Desk</li>
+                        </ul>
+                        <span class="badge badge-primary">$25/hour</span>
+                    </div>
+                    <div class="card">
+                        <h3 class="heading-h4 mb-4">Event Space</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">Large flexible venue for workshops, seminars, and community events.</p>
+                        <ul class="space-y-2 text-sm mb-6">
+                            <li><span class="text-primary font-bold mr-1">✓</span> Capacity: 100+ people</li>
+                            <li><span class="text-primary font-bold mr-1">✓</span> Modular Layout</li>
+                            <li><span class="text-primary font-bold mr-1">✓</span> Full AV Package</li>
+                            <li><span class="text-primary font-bold mr-1">✓</span> Catering Partners</li>
+                        </ul>
+                        <span class="badge badge-secondary">$500/day</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section-padding bg-gradient-to-r from-primary to-primary-dark text-white text-center">
+            <div class="container-custom max-w-2xl">
+                <h2 class="heading-h2 mb-6">Find Your Perfect Space</h2>
+                <p class="text-xl mb-8">Schedule a personalized tour and see which floor plan fits your needs best.</p>
+                <a href="contact.html" class="btn bg-white text-primary hover:bg-gray-100 btn-lg">Schedule a Tour</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12">
+        <div class="container-custom text-center">
+            <p>&copy; 2024 CoSpace. All rights reserved.</p>
+        </div>
+    </footer>
+
+    </body>
+</html>

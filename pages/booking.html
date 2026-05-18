@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your modern coworking workspace, dedicated desk, or high-tech boardroom at CoSpace">
+    <title>Book a Space - CoSpace</title>
+    <link rel="icon" type="image/png" href="../assets/brand-logo.png">
+    <link rel="stylesheet" href="../src/input.css">
+    <!-- Icons: Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../src/layout.js" defer></script>
+</head>
+<body class="bg-gray-50 dark:bg-slate-900 text-slate-900 dark:text-slate-50">
+    <a href="#main" class="sr-only focus:not-sr-only">Skip to main</a>
+    
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800 shadow-sm">
+        <div class="container-custom flex items-center justify-between h-16">
+            <a href="../" class="flex items-center gap-2 focus-ring rounded-lg px-2">
+                <div class="w-8 h-8 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold">CS</span>
+                </div>
+                <span class="font-heading font-bold text-xl hidden sm:block">CoSpace</span>
+            </a>
+            
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 focus-ring" aria-label="Toggle dark mode">
+                    <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.536l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.828-2.828a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm.707-7.071a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM9 4a1 1 0 011 1v1a1 1 0 11-2 0V5a1 1 0 011-1zm0 12a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4.536-1.464a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM4 11a1 1 0 110 2 1 1 0 010-2zm0-4a1 1 0 110 2 1 1 0 010-2z" clip-rule="evenodd"></path></svg>
+                </button>
+
+                <!-- Profile Dropdown -->
+                <div class="relative inline-block text-left" id="profile-dropdown-container">
+                    <button id="profile-btn" class="flex items-center justify-center w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 transition-colors focus-ring" aria-label="User profile menu" aria-haspopup="true" aria-expanded="false">
+                        <i data-lucide="user" class="w-5 h-5 text-slate-600 dark:text-slate-300"></i>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div id="profile-dropdown" class="hidden absolute right-0 mt-2 w-64 rounded-xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-xl z-50 overflow-hidden transform opacity-0 scale-95 transition-all duration-200 origin-top-right">
+                        <div class="p-3 border-b border-gray-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50">
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Welcome to CoSpace</p>
+                        </div>
+                        <div class="py-1.5">
+                            <a href="login.html" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors whitespace-nowrap">
+                                <i data-lucide="log-in" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+                                <span class="font-medium">Login / Sign Up</span>
+                            </a>
+                            <a href="admin-dashboard.html" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors whitespace-nowrap">
+                                <i data-lucide="shield" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+                                <span class="font-medium">Admin Dashboard</span>
+                            </a>
+                            <a href="user-dashboard.html" class="flex items-center gap-3 px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors whitespace-nowrap">
+                                <i data-lucide="layout-dashboard" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+                                <span class="font-medium">User Dashboard</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Hero section -->
+        <section class="py-20 md:py-24 bg-gradient-to-br from-slate-900 to-slate-950 dark:from-slate-900 dark:to-slate-800 text-center">
+            <div class="container-custom">
+                <h1 class="heading-h1 mb-4">Book Your Workspace</h1>
+                <p class="text-lg text-slate-400 max-w-xl mx-auto">Reserve high-end hot desks, private corporate suites, or high-tech meeting rooms instantly.</p>
+            </div>
+        </section>
+
+        <!-- Booking Main Layout -->
+        <section class="py-12">
+            <div class="container-custom">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Form steps (2 cols) -->
+                    <div class="lg:col-span-2 space-y-8">
+                        <form id="bookingForm" class="space-y-8" onsubmit="event.preventDefault(); handleBookingSubmit();">
+                            
+                            <!-- Step 1: Select Space Type -->
+                            <div class="card-elevated p-6 bg-white dark:bg-slate-800 mb-12">
+                                <h2 class="heading-h3 mb-6 flex items-center gap-2"><span class="w-7 h-7 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-sm">1</span> Choose Space Type</h2>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <label class="relative flex p-4 border border-gray-200 dark:border-slate-700 rounded-xl cursor-pointer hover:border-primary/50 transition-colors focus-within:ring-2 focus-within:ring-primary/20">
+                                        <input type="radio" name="spaceType" value="hotdesk" class="sr-only" checked onchange="updateSummary('Hot Desk', 25)">
+                                        <div class="flex items-start gap-3">
+                                            <div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center text-primary mt-0.5"><i data-lucide="coffee" class="w-4.5 h-4.5"></i></div>
+                                            <div>
+                                                <p class="font-bold">Hot Desk</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">$25 / day • Shared open spaces</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="relative flex p-4 border border-gray-200 dark:border-slate-700 rounded-xl cursor-pointer hover:border-primary/50 transition-colors focus-within:ring-2 focus-within:ring-primary/20">
+                                        <input type="radio" name="spaceType" value="dedicated" class="sr-only" onchange="updateSummary('Dedicated Desk', 45)">
+                                        <div class="flex items-start gap-3">
+                                            <div class="w-9 h-9 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary mt-0.5"><i data-lucide="award" class="w-4.5 h-4.5"></i></div>
+                                            <div>
+                                                <p class="font-bold">Dedicated Desk</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">$45 / day • Personal desk</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="relative flex p-4 border border-gray-200 dark:border-slate-700 rounded-xl cursor-pointer hover:border-primary/50 transition-colors focus-within:ring-2 focus-within:ring-primary/20">
+                                        <input type="radio" name="spaceType" value="private" class="sr-only" onchange="updateSummary('Private Office', 95)">
+                                        <div class="flex items-start gap-3">
+                                            <div class="w-9 h-9 bg-accent/10 rounded-lg flex items-center justify-center text-accent mt-0.5"><i data-lucide="shield" class="w-4.5 h-4.5"></i></div>
+                                            <div>
+                                                <p class="font-bold">Private Office</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">$95 / day • Fully enclosed space</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    
+                                    <label class="relative flex p-4 border border-gray-200 dark:border-slate-700 rounded-xl cursor-pointer hover:border-primary/50 transition-colors focus-within:ring-2 focus-within:ring-primary/20">
+                                        <input type="radio" name="spaceType" value="meeting" class="sr-only" onchange="updateSummary('Meeting Room', 150)">
+                                        <div class="flex items-start gap-3">
+                                            <div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center text-primary mt-0.5"><i data-lucide="users" class="w-4.5 h-4.5"></i></div>
+                                            <div>
+                                                <p class="font-bold">Meeting Room</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">$150 / day • Full conference gear</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Date & Duration -->
+                            <div class="card-elevated p-6 bg-white dark:bg-slate-800 mb-12">
+                                <h2 class="heading-h3 mb-6 flex items-center gap-2"><span class="w-7 h-7 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-sm">2</span> Date & Duration</h2>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="bookingDate" class="block text-xs font-bold uppercase text-slate-400 mb-1.5">Booking Date</label>
+                                        <input type="date" id="bookingDate" required class="w-full px-3.5 py-2 text-sm bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-gray-250 dark:border-slate-700 focus:outline-none focus:border-primary" onchange="updateDaysSummary()">
+                                    </div>
+                                    <div>
+                                        <label for="bookingDays" class="block text-xs font-bold uppercase text-slate-400 mb-1.5">Duration (Days)</label>
+                                        <select id="bookingDays" class="w-full px-3.5 py-2 text-sm bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-gray-250 dark:border-slate-700 focus:outline-none focus:border-primary" onchange="updateDaysSummary()">
+                                            <option value="1">1 Day</option>
+                                            <option value="2">2 Days</option>
+                                            <option value="3">3 Days</option>
+                                            <option value="5">5 Days</option>
+                                            <option value="10">10 Days</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Premium Extras -->
+                            <div class="card-elevated p-6 bg-white dark:bg-slate-800 mb-12">
+                                <h2 class="heading-h3 mb-6 flex items-center gap-2"><span class="w-7 h-7 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-sm">3</span> Add Premium Extras</h2>
+                                <div class="space-y-3">
+                                    <label class="flex items-center justify-between p-3.5 border border-gray-150 dark:border-slate-700 rounded-xl cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                                        <div class="flex items-center gap-3">
+                                            <input type="checkbox" id="extraCoffee" value="10" class="rounded text-primary focus:ring-primary w-4.5 h-4.5" onchange="updateAddons()">
+                                            <div>
+                                                <p class="font-bold text-sm">Catering Package</p>
+                                                <p class="text-xs text-slate-400">Coffee, tea, snacks served daily</p>
+                                            </div>
+                                        </div>
+                                        <span class="text-sm font-semibold text-slate-600 dark:text-slate-350">+$10/day</span>
+                                    </label>
+                                    
+                                    <label class="flex items-center justify-between p-3.5 border border-gray-150 dark:border-slate-700 rounded-xl cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                                        <div class="flex items-center gap-3">
+                                            <input type="checkbox" id="extraPrint" value="15" class="rounded text-primary focus:ring-primary w-4.5 h-4.5" onchange="updateAddons()">
+                                            <div>
+                                                <p class="font-bold text-sm">High-Tech AV Package</p>
+                                                <p class="text-xs text-slate-400">4K projector, writable smart wall access</p>
+                                            </div>
+                                        </div>
+                                        <span class="text-sm font-semibold text-slate-600 dark:text-slate-350">+$15/day</span>
+                                    </label>
+                                    
+                                    <label class="flex items-center justify-between p-3.5 border border-gray-150 dark:border-slate-700 rounded-xl cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                                        <div class="flex items-center gap-3">
+                                            <input type="checkbox" id="extraGym" value="8" class="rounded text-primary focus:ring-primary w-4.5 h-4.5" onchange="updateAddons()">
+                                            <div>
+                                                   <p class="font-bold text-sm">Gym Access</p>
+                                                <p class="text-xs text-slate-400">Unlimited entry to high-end fitness suite</p>
+                                            </div>
+                                        </div>
+                                        <span class="text-sm font-semibold text-slate-600 dark:text-slate-350">+$8/day</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg w-full">Confirm Booking & Pay</button>
+                        </form>
+                    </div>
+
+                    <!-- Sidebar Summary (1 col) -->
+                    <div class="space-y-8">
+                        <div class="card-elevated p-6 bg-white dark:bg-slate-800 sticky top-24 border-t-4 border-primary">
+                            <h3 class="heading-h4 mb-6 flex items-center gap-2"><i data-lucide="receipt" class="text-primary w-5 h-5"></i> Summary</h3>
+                            
+                            <div class="space-y-4 divide-y divide-gray-100 dark:divide-slate-700 text-sm">
+                                <div class="flex justify-between pb-3">
+                                    <span class="text-slate-500">Space Selected</span>
+                                    <span id="summarySpace" class="font-bold text-slate-800 dark:text-slate-100">Hot Desk</span>
+                                </div>
+                                <div class="flex justify-between py-3">
+                                    <span class="text-slate-500">Rate</span>
+                                    <span id="summaryRate" class="font-semibold">$25 / day</span>
+                                </div>
+                                <div class="flex justify-between py-3">
+                                    <span class="text-slate-500">Duration</span>
+                                    <span id="summaryDays" class="font-semibold">1 Day</span>
+                                </div>
+                                <div class="flex justify-between py-3">
+                                    <span class="text-slate-500">Premium Add-ons</span>
+                                    <span id="summaryAddons" class="font-semibold">$0 / day</span>
+                                </div>
+                                <div class="flex justify-between pt-4 pb-2 text-base font-extrabold border-t border-gray-200 dark:border-slate-600">
+                                    <span class="text-slate-800 dark:text-slate-100">Total Price</span>
+                                    <span id="summaryTotal" class="text-primary text-xl font-black">$25.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-gradient-to-b from-slate-900 to-slate-950 text-slate-300 pt-20 pb-10 border-t border-slate-800" role="contentinfo">
+        <div class="container-custom">
+            <!-- Upper Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+                <!-- Brand Description (5 cols) -->
+                <div class="md:col-span-5 space-y-6">
+                    <a href="../" class="flex items-center gap-2 px-1">
+                        <div class="w-9 h-9 bg-gradient-to-br from-primary to-primary-dark rounded-lg flex items-center justify-center shadow-lg shadow-primary/20">
+                            <span class="text-white font-bold text-lg">CS</span>
+                        </div>
+                        <span class="font-heading font-bold text-2xl text-white tracking-tight">CoSpace</span>
+                    </a>
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+                        Your perfect workspace solution for modern professionals. Designed to enhance collaboration, foster innovation, and scale with your business needs.
+                    </p>
+                    <!-- Social icons -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-850 hover:bg-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-400 focus-ring" aria-label="Twitter">
+                            <i data-lucide="twitter" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-850 hover:bg-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-400 focus-ring" aria-label="Instagram">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-850 hover:bg-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-400 focus-ring" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-850 hover:bg-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-400 focus-ring" aria-label="Facebook">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation Columns (4 cols) -->
+                <div class="grid grid-cols-2 md:col-span-4 gap-8">
+                    <div>
+                        <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-6">Company</h4>
+                        <ul class="space-y-3.5 text-sm">
+                            <li><a href="../index.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> Home</a></li>
+                            <li><a href="home.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> Home 2</a></li>
+                            <li><a href="about.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> About Us</a></li>
+                            <li><a href="blog.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> Blog</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-6">Support</h4>
+                        <ul class="space-y-3.5 text-sm">
+                            <li><a href="contact.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> Contact</a></li>
+                            <li><a href="services.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> Service</a></li>
+                            <li><a href="pricing.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> Pricing</a></li>
+                            <li><a href="faq.html" class="hover:text-primary transition-colors flex items-center gap-1.5"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-slate-500"></i> FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Location/Contact Info Column (3 cols) -->
+                <div class="md:col-span-3 space-y-6">
+                    <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-6">Visit Our Space</h4>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
+                            <span>123 Creative Plaza, Floor 4,<br>New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-primary flex-shrink-0"></i>
+                            <span>+1 (800) 555-DESK</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-primary flex-shrink-0"></i>
+                            <span>hello@cospace.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Lower Bar -->
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-slate-500">&copy; 2024 CoSpace. All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-slate-400">
+                    <a href="privacy.html" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Real-time Pricing Logic
+        let selectedSpaceName = 'Hot Desk';
+        let spaceRate = 25;
+        let bookingDays = 1;
+        let addonPrice = 0;
+
+        function updateSummary(name, rate) {
+            selectedSpaceName = name;
+            spaceRate = rate;
+            document.getElementById('summarySpace').innerText = name;
+            document.getElementById('summaryRate').innerText = '$' + rate + ' / day';
+            calculateTotal();
+        }
+
+        function updateDaysSummary() {
+            const daysSelect = document.getElementById('bookingDays');
+            bookingDays = parseInt(daysSelect.value);
+            document.getElementById('summaryDays').innerText = bookingDays + (bookingDays === 1 ? ' Day' : ' Days');
+            calculateTotal();
+        }
+
+        function updateAddons() {
+            addonPrice = 0;
+            if (document.getElementById('extraCoffee').checked) addonPrice += 10;
+            if (document.getElementById('extraPrint').checked) addonPrice += 15;
+            if (document.getElementById('extraGym').checked) addonPrice += 8;
+
+            document.getElementById('summaryAddons').innerText = '$' + addonPrice + ' / day';
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            const total = (spaceRate + addonPrice) * bookingDays;
+            document.getElementById('summaryTotal').innerText = '$' + total.toFixed(2);
+        }
+
+        function handleBookingSubmit() {
+            alert('Congratulations! Your workspace has been booked successfully.');
+            window.location.href = 'user-dashboard.html';
+        }
+
+        // Set default date to tomorrow
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        document.getElementById('bookingDate').value = tomorrow.toISOString().split('T')[0];
+    </script>
+</body>
+</html>
