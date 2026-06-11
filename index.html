@@ -10,14 +10,14 @@
     <meta name="theme-color" content="#14b8a6">
     <title>CoSpace - Modern Coworking Platform</title>
     <link rel="icon" href="./assets/images/brand-logo.png">
-    <link rel="stylesheet" href="./src/input.css">
+    <link rel="stylesheet" href="./src/input.css?v=3">
     <!-- Icons: Feather Icons CDN -->
     <!-- Icons: Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="./src/layout.js" defer></script>
 </head>
 
-<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-50">
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-50 overflow-x-hidden">
     <!-- Skip to content link for accessibility -->
     <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
 
@@ -35,8 +35,7 @@
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-8">
-                <a href="./index.html"
-                    class="text-primary font-semibold transition-colors">Home</a>
+                <a href="./index.html" class="text-primary font-semibold transition-colors">Home</a>
                 <a href="./pages/home.html"
                     class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">Home 2</a>
                 <a href="./pages/about.html"
@@ -51,18 +50,19 @@
 
             <!-- Right Side Actions -->
             <div class="flex items-center gap-4">
+                <!-- RTL Toggle -->
+                <button id="rtl-toggle"
+                    class="hidden md:flex p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors focus-ring"
+                    aria-label="Toggle RTL direction" title="Toggle RTL">
+                    <i data-lucide="align-right" class="w-5 h-5 text-slate-600 dark:text-slate-300"></i>
+                </button>
+
                 <!-- Theme Toggle -->
                 <button id="theme-toggle"
-                    class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors focus-ring"
+                    class="hidden md:flex p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors focus-ring"
                     aria-label="Toggle dark mode" title="Toggle theme">
-                    <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                    </svg>
-                    <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd"
-                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.536l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.828-2.828a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm.707-7.071a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM9 4a1 1 0 011 1v1a1 1 0 11-2 0V5a1 1 0 011-1zm0 12a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4.536-1.464a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM4 11a1 1 0 110 2 1 1 0 010-2zm0-4a1 1 0 110 2 1 1 0 010-2z"
-                            clip-rule="evenodd"></path>
-                    </svg>
+                    <i data-lucide="moon" class="w-5 h-5 hidden dark:block text-slate-600 dark:text-slate-300"></i>
+                    <i data-lucide="sun" class="w-5 h-5 dark:hidden text-slate-600 dark:text-slate-300"></i>
                 </button>
 
                 <!-- Profile Dropdown -->
@@ -150,7 +150,7 @@
     <main id="main-content">
         <!-- HERO SECTION -->
         <section
-            class="min-h-screen pt-16 pb-16 md:pt-24 md:pb-12 bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
+            class="py-20 md:py-28 bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
             <div class="container-custom">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <!-- Left Content -->
@@ -166,8 +166,8 @@
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4">
                             <a href="pages/contact.html" class="btn btn-primary btn-lg">Start Free Trial</a>
-                            <a href="pages/about.html"><button
-                                    class="btn btn-outline btn-lg">Get to Know Us</button></a>
+                            <a href="pages/about.html"><button class="btn btn-outline btn-lg">Get to Know
+                                    Us</button></a>
                         </div>
                         <div
                             class="flex flex-col sm:flex-row gap-6 mt-10 pt-10 border-t border-gray-200 dark:border-slate-700">
@@ -405,73 +405,163 @@
             </div>
         </section>
 
-        <!-- AMENITIES SECTION -->
+        <!-- AMENITIES & FACILITIES SECTION -->
         <section class="section-padding bg-white dark:bg-slate-900">
             <div class="container-custom">
                 <div class="text-center mb-16">
-                    <h2 class="heading-h2 mb-4">Premium Amenities</h2>
+                    <h2 class="heading-h2 mb-4">Premium Amenities & Facilities</h2>
                     <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-                        Everything you need to work smarter, not harder.
+                        Everything you need to work smarter, not harder. Discover the spaces and services designed to
+                        elevate your productivity.
                     </p>
                 </div>
 
-                <!-- Amenities Grid -->
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
-                        <div
-                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-primary">
-                            <i data-lucide="coffee" class="w-6 h-6"></i>
+                <!-- Detailed Amenities Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+
+                    <!-- Amenity 1 -->
+                    <div
+                        class="card flex flex-col h-full hover:-translate-y-1 transition-transform border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-md">
+                        <img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=600&q=80"
+                            alt="Meeting Rooms"
+                            class="h-48 object-cover rounded-t-xl -mt-6 -mx-6 mb-6 w-[calc(100%+3rem)] max-w-none">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="p-2 bg-primary/10 rounded-lg text-primary"><i data-lucide="users"
+                                    class="w-5 h-5"></i></div>
+                            <h3 class="heading-h4">Meeting Rooms</h3>
                         </div>
-                        <h4 class="font-semibold mb-1">Coffee & Beverages</h4>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4 flex-grow">Professional, soundproofed rooms
+                            equipped with whiteboards and screens for seamless presentations.</p>
+                        <div class="space-y-2 text-sm text-slate-500 dark:text-slate-400 mb-4">
+                            <p><strong>Benefits:</strong> Privacy, AV equipment, catering options</p>
+                            <p><strong>Availability:</strong> Pre-booking required (Hourly)</p>
+                            <p><strong>Ideal For:</strong> Corporate Teams, Agencies, Client Pitches</p>
+                        </div>
+                        <a href="pages/services.html"
+                            class="text-primary font-medium hover:underline inline-flex items-center gap-1 mt-auto">Book
+                            a Room <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                     </div>
-                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
-                        <div
-                            class="w-12 h-12 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-secondary">
-                            <i data-lucide="wifi" class="w-6 h-6"></i>
+
+                    <!-- Amenity 2 -->
+                    <div
+                        class="card flex flex-col h-full hover:-translate-y-1 transition-transform border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-md">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80"
+                            alt="Private Offices"
+                            class="h-48 object-cover rounded-t-xl -mt-6 -mx-6 mb-6 w-[calc(100%+3rem)] max-w-none">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="p-2 bg-secondary/10 rounded-lg text-secondary"><i data-lucide="briefcase"
+                                    class="w-5 h-5"></i></div>
+                            <h3 class="heading-h4">Private Offices</h3>
                         </div>
-                        <h4 class="font-semibold mb-1">High-Speed WiFi</h4>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4 flex-grow">Fully furnished, lockable offices
+                            tailored to your team's size with personalized branding options.</p>
+                        <div class="space-y-2 text-sm text-slate-500 dark:text-slate-400 mb-4">
+                            <p><strong>Benefits:</strong> 24/7 Access, secure storage, mail handling</p>
+                            <p><strong>Availability:</strong> Monthly / Yearly Leases</p>
+                            <p><strong>Ideal For:</strong> Startups, Growing Agencies, Entrepreneurs</p>
+                        </div>
+                        <a href="pages/services.html"
+                            class="text-secondary font-medium hover:underline inline-flex items-center gap-1 mt-auto">View
+                            Offices <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                     </div>
-                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
-                        <div
-                            class="w-12 h-12 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-accent">
-                            <i data-lucide="users" class="w-6 h-6"></i>
+
+                    <!-- Amenity 3 -->
+                    <div
+                        class="card flex flex-col h-full hover:-translate-y-1 transition-transform border border-gray-100 dark:border-slate-800 shadow-sm hover:shadow-md">
+                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80"
+                            alt="Coworking Spaces"
+                            class="h-48 object-cover rounded-t-xl -mt-6 -mx-6 mb-6 w-[calc(100%+3rem)] max-w-none">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="p-2 bg-accent/10 rounded-lg text-accent"><i data-lucide="monitor"
+                                    class="w-5 h-5"></i></div>
+                            <h3 class="heading-h4">Coworking Spaces</h3>
                         </div>
-                        <h4 class="font-semibold mb-1">Meeting Rooms</h4>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4 flex-grow">Vibrant open-plan areas featuring
+                            hot desks and dedicated desks designed for collaboration.</p>
+                        <div class="space-y-2 text-sm text-slate-500 dark:text-slate-400 mb-4">
+                            <p><strong>Benefits:</strong> Networking, flexible seating, community events</p>
+                            <p><strong>Availability:</strong> Daily Passes / Monthly Access</p>
+                            <p><strong>Ideal For:</strong> Freelancers, Remote Workers, Digital Nomads</p>
+                        </div>
+                        <a href="pages/services.html"
+                            class="text-accent font-medium hover:underline inline-flex items-center gap-1 mt-auto">Get a
+                            Pass <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                     </div>
-                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
-                        <div
-                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-primary">
-                            <i data-lucide="printer" class="w-6 h-6"></i>
+                </div>
+
+                <!-- Info Grid (How it works & Who it benefits) -->
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-12 bg-slate-50 dark:bg-slate-800 rounded-3xl p-6 sm:p-8 md:p-12">
+                    <div>
+                        <h3 class="heading-h3 mb-6">How It Works</h3>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold flex-shrink-0">
+                                    1</div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Choose Your Plan</h4>
+                                    <p class="text-slate-600 dark:text-slate-400 text-sm">Select from our flexible
+                                        membership options ranging from day passes to annual dedicated office leases.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold flex-shrink-0">
+                                    2</div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Book Spaces</h4>
+                                    <p class="text-slate-600 dark:text-slate-400 text-sm">Use our member portal or
+                                        mobile app to easily reserve meeting rooms and conference facilities on demand.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold flex-shrink-0">
+                                    3</div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Access & Policies</h4>
+                                    <p class="text-slate-600 dark:text-slate-400 text-sm">Enjoy 24/7 secure building
+                                        access (for eligible plans). Review our workspace etiquette and guest policies
+                                        in the portal.</p>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="font-semibold mb-1">Print Services</h4>
                     </div>
-                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
-                        <div
-                            class="w-12 h-12 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-secondary">
-                            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+
+                    <div>
+                        <h3 class="heading-h3 mb-6">Who We Serve</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">Our ecosystem is built to support
+                            professionals at every stage of their journey.</p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 rounded-lg shadow-sm">
+                                <i data-lucide="laptop" class="w-5 h-5 text-secondary"></i>
+                                <span class="font-medium">Freelancers</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 rounded-lg shadow-sm">
+                                <i data-lucide="globe" class="w-5 h-5 text-accent"></i>
+                                <span class="font-medium">Remote Workers</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 rounded-lg shadow-sm">
+                                <i data-lucide="layers" class="w-5 h-5 text-primary"></i>
+                                <span class="font-medium">Creative Agencies</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 rounded-lg shadow-sm">
+                                <i data-lucide="rocket" class="w-5 h-5 text-secondary"></i>
+                                <span class="font-medium">Tech Startups</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 rounded-lg shadow-sm">
+                                <i data-lucide="lightbulb" class="w-5 h-5 text-accent"></i>
+                                <span class="font-medium">Entrepreneurs</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white dark:bg-slate-900 rounded-lg shadow-sm">
+                                <i data-lucide="building-2" class="w-5 h-5 text-primary"></i>
+                                <span class="font-medium">Corporate Teams</span>
+                            </div>
                         </div>
-                        <h4 class="font-semibold mb-1">Fitness Center</h4>
-                    </div>
-                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
-                        <div
-                            class="w-12 h-12 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-accent">
-                            <i data-lucide="utensils" class="w-6 h-6"></i>
-                        </div>
-                        <h4 class="font-semibold mb-1">Lunch Cafe</h4>
-                    </div>
-                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
-                        <div
-                            class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-primary">
-                            <i data-lucide="package" class="w-6 h-6"></i>
-                        </div>
-                        <h4 class="font-semibold mb-1">Mail Services</h4>
-                    </div>
-                    <div class="card text-center p-6 hover:shadow-lg transition-shadow flex flex-col items-center">
-                        <div
-                            class="w-12 h-12 bg-secondary bg-opacity-10 rounded-lg flex items-center justify-center mb-4 text-secondary">
-                            <i data-lucide="headphones" class="w-6 h-6"></i>
-                        </div>
-                        <h4 class="font-semibold mb-1">Phone Booths</h4>
                     </div>
                 </div>
             </div>
@@ -485,56 +575,96 @@
                     Join hundreds of professionals and companies that trust CoSpace for their workspace solutions.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="pages/pricing.html" class="btn bg-white text-primary hover:bg-gray-100 btn-lg">See
-                        Pricing</a>
-                    <a href="pages/contact.html" class="btn btn-outline btn-lg bg-white">Contact Sales</a>
+                    <a href="pages/pricing.html"
+                        class="btn bg-white text-primary hover:bg-gray-100 font-bold btn-lg">See Pricing</a>
+                    <a href="pages/contact.html"
+                        class="btn border-2 border-white text-white hover:bg-white hover:text-primary font-bold btn-lg">Contact
+                        Sales</a>
                 </div>
             </div>
         </section>
 
-        <!-- TESTIMONIALS SECTION (Minimal) -->
+        <!-- TESTIMONIALS SECTION -->
         <section class="section-padding bg-slate-50 dark:bg-slate-800">
             <div class="container-custom">
                 <h2 class="heading-h2 text-center mb-16">What Our Members Say</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="card">
-                        <div class="flex items-center gap-1 mb-4 text-amber-400">
+                    <!-- Testimonial 1 -->
+                    <div
+                        class="card flex flex-col h-full bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 shadow-sm">
+                        <div class="flex items-center gap-1 mb-6 text-amber-400">
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                         </div>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4 italic">"CoSpace has been a game-changer for
-                            my startup. The community alone is worth every penny."</p>
-                        <p class="font-semibold">- Sarah Johnson</p>
-                        <p class="text-sm text-slate-500">Founder, TechVenture</p>
+                        <p
+                            class="text-slate-600 dark:text-slate-300 mb-8 italic flex-grow text-left text-lg leading-relaxed">
+                            "CoSpace has been a game-changer for my startup. The community alone is worth every penny.
+                            The private offices are perfectly sized and the internet is incredibly fast."
+                        </p>
+                        <div
+                            class="flex items-center gap-4 mt-auto border-t border-gray-100 dark:border-slate-800 pt-6">
+                            <img src="https://i.pravatar.cc/150?img=1" alt="Sarah Johnson"
+                                class="w-12 h-12 rounded-full object-cover">
+                            <div class="text-left">
+                                <p class="font-semibold text-slate-900 dark:text-white">Sarah Johnson</p>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">Founder, TechVenture</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <div class="flex items-center gap-1 mb-4 text-amber-400">
+
+                    <!-- Testimonial 2 -->
+                    <div
+                        class="card flex flex-col h-full bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 shadow-sm">
+                        <div class="flex items-center gap-1 mb-6 text-amber-400">
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                         </div>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4 italic">"Professional facilities, great
-                            networking opportunities, and the support team is always helpful."</p>
-                        <p class="font-semibold">- Michael Chen</p>
-                        <p class="text-sm text-slate-500">Freelance Consultant</p>
+                        <p
+                            class="text-slate-600 dark:text-slate-300 mb-8 italic flex-grow text-left text-lg leading-relaxed">
+                            "Professional facilities, great networking opportunities, and the support team is always
+                            helpful. It's the perfect place for freelancers looking to escape the home office."
+                        </p>
+                        <div
+                            class="flex items-center gap-4 mt-auto border-t border-gray-100 dark:border-slate-800 pt-6">
+                            <img src="https://i.pravatar.cc/150?img=11" alt="Michael Chen"
+                                class="w-12 h-12 rounded-full object-cover">
+                            <div class="text-left">
+                                <p class="font-semibold text-slate-900 dark:text-white">Michael Chen</p>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">Freelance Consultant</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <div class="flex items-center gap-1 mb-4 text-amber-400">
+
+                    <!-- Testimonial 3 -->
+                    <div
+                        class="card flex flex-col h-full bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 shadow-sm">
+                        <div class="flex items-center gap-1 mb-6 text-amber-400">
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current text-slate-200 dark:text-slate-700"></i>
                         </div>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4 italic">"Best decision for our team. The
-                            flexibility and amenities are exactly what we needed."</p>
-                        <p class="font-semibold">- Emma Rodriguez</p>
-                        <p class="text-sm text-slate-500">CEO, Design Studio</p>
+                        <p
+                            class="text-slate-600 dark:text-slate-300 mb-8 italic flex-grow text-left text-lg leading-relaxed">
+                            "Best decision for our team. The flexibility and amenities are exactly what we needed to
+                            foster creativity and collaboration. Highly recommended for growing agencies."
+                        </p>
+                        <div
+                            class="flex items-center gap-4 mt-auto border-t border-gray-100 dark:border-slate-800 pt-6">
+                            <img src="https://i.pravatar.cc/150?img=5" alt="Emma Rodriguez"
+                                class="w-12 h-12 rounded-full object-cover">
+                            <div class="text-left">
+                                <p class="font-semibold text-slate-900 dark:text-white">Emma Rodriguez</p>
+                                <p class="text-sm text-slate-500 dark:text-slate-400">CEO, Design Studio</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -542,55 +672,87 @@
     </main>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="bg-white dark:bg-slate-900  text-slate-600 dark:text-slate-400 pt-16 pb-8 border-t border-gray-200 dark:border-slate-800 animate-fade-in" role="contentinfo">
+    <footer
+        class="bg-white dark:bg-slate-900  text-slate-600 dark:text-slate-400 pt-16 pb-8 border-t border-gray-200 dark:border-slate-800 animate-fade-in"
+        role="contentinfo">
         <div class="container-custom">
             <!-- Main Grid (4 Equal Columns) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8, mb-12">
-                
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+
                 <!-- 1. Brand -->
                 <div class="flex flex-col space-y-6">
                     <a href="/" class="flex items-center gap-2 px-1">
-                         <div class="w-12 h-12 rounded-lg flex items-center justify-center"><img
-                        src="./assets/images/brand-logo.png" alt="brand-logo">
-                </div>
-                        <span class="font-heading font-extrabold text-2xl text-black dark:text-white tracking-tight">CoSpace</span>
+                        <div class="w-12 h-12 rounded-lg flex items-center justify-center"><img
+                                src="./assets/images/brand-logo.png" alt="brand-logo">
+                        </div>
+                        <span
+                            class="font-heading font-extrabold text-2xl text-black dark:text-white tracking-tight">CoSpace</span>
                     </a>
                     <p class="text-sm leading-relaxed ">
-                      An effective workplace ecosystem for your business needs.
+                        An effective workplace ecosystem for your business needs.
                     </p>
                     <div class="flex items-center gap-3">
-                        <a href="#" class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm" aria-label="Twitter"><i data-lucide="twitter" class="w-4 h-4"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm" aria-label="Facebook"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm"
+                            aria-label="Twitter"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm"
+                            aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm"
+                            aria-label="LinkedIn"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm"
+                            aria-label="Facebook"><i data-lucide="facebook" class="w-4 h-4"></i></a>
                     </div>
                 </div>
 
                 <!-- 2. Company Links -->
                 <div class="flex flex-col space-y-6">
-                    <h4 class="font-heading font-bold text-black dark:text-white text-base tracking-wide mb-2">Company</h4>
+                    <h4 class="font-heading font-bold text-black dark:text-white text-base tracking-wide mb-2">Company
+                    </h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="index.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Home</a></li>
-                        <li><a href="pages/home.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Home 2</a></li>
-                        <li><a href="pages/about.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> About Us</a></li>
-                        <li><a href="pages/blog.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Blog</a></li>
+                        <li><a href="index.html" class="hover:text-primary transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Home</a></li>
+                        <li><a href="pages/home.html"
+                                class="hover:text-primary transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Home 2</a></li>
+                        <li><a href="pages/about.html"
+                                class="hover:text-primary transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> About Us</a></li>
+                        <li><a href="pages/blog.html"
+                                class="hover:text-primary transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Blog</a></li>
                     </ul>
                 </div>
 
                 <!-- 3. Support Links -->
                 <div class="flex flex-col space-y-6">
-                    <h4 class="font-heading font-bold text-black dark:text-white text-base tracking-wide mb-2">Support</h4>
+                    <h4 class="font-heading font-bold text-black dark:text-white text-base tracking-wide mb-2">Support
+                    </h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="pages/contact.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Contact Sales</a></li>
-                        <li><a href="pages/services.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Services</a></li>
-                        <li><a href="pages/pricing.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Pricing Plans</a></li>
-                        <li><a href="pages/faq.html" class="hover:text-primary transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Help & FAQ</a></li>
+                        <li><a href="pages/contact.html"
+                                class="hover:text-primary transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Contact Sales</a>
+                        </li>
+                        <li><a href="pages/services.html"
+                                class="hover:text-primary transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Services</a></li>
+                        <li><a href="pages/pricing.html"
+                                class="hover:text-primary transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Pricing Plans</a>
+                        </li>
+                        <li><a href="pages/faq.html"
+                                class="hover:text-primary transition-colors flex items-center gap-2"><i
+                                    data-lucide="chevron-right" class="w-3.5 h-3.5 text-primary"></i> Help & FAQ</a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- 4. Contact Details -->
                 <div class="flex flex-col space-y-6">
-                    <h4 class="font-heading font-bold text-black dark:text-white text-base tracking-wide mb-2">Headquarters</h4>
+                    <h4 class="font-heading font-bold text-black dark:text-white text-base tracking-wide mb-2">
+                        Headquarters</h4>
                     <ul class="space-y-4 text-sm">
                         <li class="flex items-start gap-3">
                             <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"></i>
@@ -602,7 +764,8 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="mail" class="w-4 h-4 text-primary flex-shrink-0"></i>
-                            <a href="mailto:hello@cospace.com" class="hover:text-primary transition-colors">hello@cospace.com</a>
+                            <a href="mailto:hello@cospace.com"
+                                class="hover:text-primary transition-colors">hello@cospace.com</a>
                         </li>
                     </ul>
                 </div>
@@ -610,7 +773,8 @@
             </div>
 
             <!-- Bottom Bar -->
-            <div class="border-t border-gray-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+            <div
+                class="border-t border-gray-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
                 <p>&copy; 2026 CoSpace. All rights reserved.</p>
                 <div class="flex gap-6 font-medium">
                     <a href="pages/privacy.html" class="hover:text-primary transition-colors">Privacy Policy</a>
@@ -621,6 +785,6 @@
     </footer>
 
     <!-- ===== SCRIPTS ===== -->
-    </body>
+</body>
 
 </html>

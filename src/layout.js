@@ -64,18 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <!-- Right Side Actions -->
             <div class="flex items-center gap-4">
+                <!-- RTL Toggle -->
+                <button id="rtl-toggle"
+                    class="hidden md:flex p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors focus-ring"
+                    aria-label="Toggle RTL direction" title="Toggle RTL">
+                    <i data-lucide="align-right" class="w-5 h-5 text-slate-600 dark:text-slate-300"></i>
+                </button>
+
                 <!-- Theme Toggle -->
                 <button id="theme-toggle"
-                    class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors focus-ring"
+                    class="hidden md:flex p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors focus-ring"
                     aria-label="Toggle dark mode" title="Toggle theme">
-                    <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                    </svg>
-                    <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd"
-                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.536l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.828-2.828a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm.707-7.071a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM9 4a1 1 0 011 1v1a1 1 0 11-2 0V5a1 1 0 011-1zm0 12a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4.536-1.464a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM4 11a1 1 0 110 2 1 1 0 010-2zm0-4a1 1 0 110 2 1 1 0 010-2z"
-                            clip-rule="evenodd"></path>
-                    </svg>
+                    <i data-lucide="moon" class="w-5 h-5 hidden dark:block text-slate-600 dark:text-slate-300"></i>
+                    <i data-lucide="sun" class="w-5 h-5 dark:hidden text-slate-600 dark:text-slate-300"></i>
                 </button>
 
                 <!-- Profile Dropdown -->
@@ -87,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </button>
                     <!-- Dropdown Menu -->
                     <div id="profile-dropdown"
-                        class="hidden absolute right-0 mt-2 w-64 rounded-xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-xl z-50 overflow-hidden transform opacity-0 scale-95 transition-all duration-200 origin-top-right">
+                        class="hidden absolute right-0 mt-2 w-56 sm:w-64 rounded-xl bg-white dark:bg-slate-800 border border-gray-100 dark:border-slate-700 shadow-xl z-50 overflow-hidden transform opacity-0 scale-95 transition-all duration-200 origin-top-right">
                         <div
                             class="p-3 border-b border-gray-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50">
                             <p class="text-sm text-slate-500 dark:text-slate-400">Welcome to CoSpace</p>
@@ -116,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button id="mobile-menu-btn"
                     class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 focus-ring"
                     aria-label="Toggle menu" aria-expanded="false">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -126,31 +127,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden md:hidden border-t border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-800">
+            class="hidden absolute top-full left-0 w-full md:hidden border-t border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-800 shadow-xl z-40">
             <div class="container-custom py-4 space-y-2">
                 <a href="${prefix}index.html"
-                    class="block px-4 py-2 rounded-lg ${currentPage === 'home' ? 'bg-gray-200 dark:bg-slate-700 text-primary font-medium' : 'hover:bg-gray-200 dark:hover:bg-slate-700'} transition-colors">Home</a>
+                    class="block px-4 py-2 rounded-lg ${currentPage === 'home' ? 'bg-gray-200 dark:bg-slate-700 text-primary font-medium' : 'hover:bg-gray-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300'} transition-colors">Home</a>
                 <a href="${prefix}pages/home.html"
-                    class="block px-4 py-2 rounded-lg ${currentPage === 'home2' ? 'bg-gray-200 dark:bg-slate-700 text-primary font-medium' : 'hover:bg-gray-200 dark:hover:bg-slate-700'} transition-colors">Home 2</a>
+                    class="block px-4 py-2 rounded-lg ${currentPage === 'home2' ? 'bg-gray-200 dark:bg-slate-700 text-primary font-medium' : 'hover:bg-gray-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300'} transition-colors">Home 2</a>
                 <a href="${prefix}pages/about.html"
-                    class="block px-4 py-2 rounded-lg ${currentPage === 'about' ? 'bg-gray-200 dark:bg-slate-700 text-primary font-medium' : 'hover:bg-gray-200 dark:hover:bg-slate-700'} transition-colors">About</a>
+                    class="block px-4 py-2 rounded-lg ${currentPage === 'about' ? 'bg-gray-200 dark:bg-slate-700 text-primary font-medium' : 'hover:bg-gray-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300'} transition-colors">About</a>
                 <a href="${prefix}pages/services.html"
-                    class="block px-4 py-2 rounded-lg ${currentPage === 'services' ? 'bg-gray-200 dark:bg-slate-700 text-primary font-medium' : 'hover:bg-gray-200 dark:hover:bg-slate-700'} transition-colors">Services</a>
+                    class="block px-4 py-2 rounded-lg ${currentPage === 'services' ? 'bg-gray-200 dark:bg-slate-700 text-primary font-medium' : 'hover:bg-gray-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300'} transition-colors">Services</a>
                 <a href="${prefix}pages/blog.html"
-                    class="block px-4 py-2 rounded-lg ${currentPage === 'blog' ? 'bg-gray-200 dark:bg-slate-700 text-primary font-medium' : 'hover:bg-gray-200 dark:hover:bg-slate-700'} transition-colors">Blog</a>
+                    class="block px-4 py-2 rounded-lg ${currentPage === 'blog' ? 'bg-gray-200 dark:bg-slate-700 text-primary font-medium' : 'hover:bg-gray-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300'} transition-colors">Blog</a>
                 <a href="${prefix}pages/contact.html"
-                    class="block px-4 py-2 rounded-lg ${currentPage === 'contact' ? 'bg-gray-200 dark:bg-slate-700 text-primary font-medium' : 'hover:bg-gray-200 dark:hover:bg-slate-700'} transition-colors">Contact</a>
+                    class="block px-4 py-2 rounded-lg ${currentPage === 'contact' ? 'bg-gray-200 dark:bg-slate-700 text-primary font-medium' : 'hover:bg-gray-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300'} transition-colors">Contact</a>
+
+                <div class="border-t border-gray-200 dark:border-slate-700 my-2 pt-2">
+                    <p class="px-4 py-1 text-xs font-semibold text-slate-400 uppercase tracking-wider">Preferences</p>
+                    <button id="mobile-rtl-toggle" class="w-full text-left px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                        <i data-lucide="align-right" class="w-4 h-4 text-slate-400"></i> Toggle RTL
+                    </button>
+                    <button id="mobile-theme-toggle" class="w-full text-left px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                        <i data-lucide="moon" class="w-4 h-4 hidden dark:block text-slate-400"></i>
+                        <i data-lucide="sun" class="w-4 h-4 dark:hidden text-slate-400"></i>Toggle Mode
+                        <span class="hidden dark:inline">Light Mode</span>
+                        <span class="inline dark:hidden">Dark Mode</span>
+                    </button>
+                </div>
 
                 <div class="border-t border-gray-200 dark:border-slate-700 my-2 pt-2">
                     <p class="px-4 py-1 text-xs font-semibold text-slate-400 uppercase tracking-wider">Account</p>
                     <a href="${prefix}pages/login.html"
-                        class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2"><i
+                        class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-2"><i
                             data-lucide="log-in" class="w-4 h-4 text-slate-400"></i> Login / Sign Up</a>
                     <a href="${prefix}pages/admin-dashboard.html"
-                        class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2"><i
+                        class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-2"><i
                             data-lucide="shield" class="w-4 h-4 text-slate-400"></i> Admin Dashboard</a>
                     <a href="${prefix}pages/user-dashboard.html"
-                        class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors flex items-center gap-2"><i
+                        class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-2"><i
                             data-lucide="layout-dashboard" class="w-4 h-4 text-slate-400"></i> User Dashboard</a>
                 </div>
             </div>
@@ -176,12 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="text-sm leading-relaxed">
                         An effective workplace ecosystem for your business needs.
                     </p>
-                    <div class="flex items-center gap-3">
-                        <a href="#" class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm" aria-label="Twitter"><i data-lucide="twitter" class="w-4 h-4"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-                        <a href="#" class="w-9 h-9 rounded-full bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 hover:bg-primary hover:border-primary hover:text-white flex items-center justify-center transition-all duration-300 text-slate-500 shadow-sm" aria-label="Facebook"><i data-lucide="facebook" class="w-4 h-4"></i></a>
-                    </div>
+                  
                 </div>
 
                 <!-- 2. Company Links -->
@@ -239,21 +248,22 @@ document.addEventListener('DOMContentLoaded', () => {
     </footer>
     `;
 
-    // 6. Replace Navbar
-    const navContainer = document.querySelector('body > nav') || document.querySelector('nav');
-    if (navContainer) {
-        navContainer.outerHTML = navHtml;
-    } else {
-        document.body.insertAdjacentHTML('afterbegin', navHtml);
-    }
+    // 6 & 7. Replace Navbar and Footer if not a dashboard
+    const isDashboard = window.location.pathname.includes('dashboard');
+    if (!isDashboard) {
+        const navContainer = document.querySelector('body > nav') || document.querySelector('nav');
+        if (navContainer) {
+            navContainer.outerHTML = navHtml;
+        } else {
+            document.body.insertAdjacentHTML('afterbegin', navHtml);
+        }
 
-    // 7. Replace Footer
-    // We explicitly avoid replacing inner footers (like those in testimonials or cards) by targetting the last footer element or body > footer
-    const footerContainer = document.querySelector('body > footer') || document.querySelector('footer:last-of-type');
-    if (footerContainer && !footerContainer.closest('.card') && !footerContainer.closest('.testimonial')) {
-        footerContainer.outerHTML = footerHtml;
-    } else if (document.body) {
-        document.body.insertAdjacentHTML('beforeend', footerHtml);
+        const footerContainer = document.querySelector('body > footer') || document.querySelector('footer:last-of-type');
+        if (footerContainer && !footerContainer.closest('.card') && !footerContainer.closest('.testimonial')) {
+            footerContainer.outerHTML = footerHtml;
+        } else if (document.body) {
+            document.body.insertAdjacentHTML('beforeend', footerHtml);
+        }
     }
 
     // 8. Bind interactive events
@@ -262,16 +272,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initLayoutEvents() {
     // Theme Toggle Logic
-    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggles = [document.getElementById('theme-toggle'), document.getElementById('mobile-theme-toggle')];
     const html = document.documentElement;
 
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark');
-            const isDark = html.classList.contains('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        });
+    themeToggles.forEach(toggle => {
+        if (toggle) {
+            toggle.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                const isDark = html.classList.contains('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
+        }
+    });
+
+    // RTL Toggle Logic
+    const rtlToggles = [document.getElementById('rtl-toggle'), document.getElementById('mobile-rtl-toggle')];
+    
+    // Init RTL from local storage
+    const savedDir = localStorage.getItem('dir');
+    if (savedDir) {
+        html.setAttribute('dir', savedDir);
     }
+
+    rtlToggles.forEach(toggle => {
+        if (toggle) {
+            toggle.addEventListener('click', () => {
+                const currentDir = html.getAttribute('dir') || 'ltr';
+                const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
+                html.setAttribute('dir', newDir);
+                localStorage.setItem('dir', newDir);
+            });
+        }
+    });
 
     // Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');

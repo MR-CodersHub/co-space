@@ -11,7 +11,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../src/layout.js" defer></script>
 </head>
-<body class="bg-white dark:bg-slate-900">
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-50">
     <a href="#main" class="sr-only focus:not-sr-only">Skip to main</a>
     
     <!-- Navigation -->
@@ -47,93 +47,99 @@
             <div class="container-custom max-w-5xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                     <!-- Post 1 -->
-                    <article class="card-elevated hover:shadow-lg transition-shadow cursor-pointer group">
-                        <div class="h-48 relative mb-4 rounded-lg overflow-hidden">
+                    <article class="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group overflow-hidden flex flex-col">
+                        <div class="h-48 relative overflow-hidden shrink-0">
                             <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="10 Ways to Maximize Your Coworking Space" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-20"></div>
                         </div>
-                        <div class="flex gap-2 mb-3">
-                            <span class="badge badge-primary">Productivity</span>
-                            <span class="text-xs text-slate-500">5 min read</span>
+                        <div class="p-8 flex flex-col grow">
+                            <div class="flex gap-2 mb-3">
+                                <span class="badge badge-primary">Productivity</span>
+                            </div>
+                            <a href="./blog-detail.html" class="block"><h3 class="heading-h4 mb-2 hover:text-primary transition-colors cursor-pointer">10 Ways to Maximize Your Coworking Space</h3></a>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4 grow">Discover proven strategies to get the most out of your coworking membership and boost productivity.</p>
+                            <p class="text-sm text-slate-500 font-semibold">Dec 20, 2024</p>
                         </div>
-                         <a href="./blog-detail.html" class="block"><h3 class="heading-h4 mb-2 hover:text-primary transition-colors cursor-pointer">10 Ways to Maximize Your Coworking Space</h3></a>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">Discover proven strategies to get the most out of your coworking membership and boost productivity.</p>
-                        <p class="text-sm text-slate-500">Dec 20, 2024</p>
                     </article>
 
                     <!-- Post 2 -->
-                    <article class="card-elevated hover:shadow-lg transition-shadow cursor-pointer group">
-                        <div class="h-48 relative mb-4 rounded-lg overflow-hidden">
+                    <article class="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group overflow-hidden flex flex-col">
+                        <div class="h-48 relative overflow-hidden shrink-0">
                             <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="The Future of Flexible Work in 2024" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-20"></div>
                         </div>
-                        <div class="flex gap-2 mb-3">
-                            <span class="badge badge-secondary">Trends</span>
-                            <span class="text-xs text-slate-500">7 min read</span>
+                        <div class="p-8 flex flex-col grow">
+                            <div class="flex gap-2 mb-3">
+                                <span class="badge badge-secondary">Trends</span>
+                            </div>
+                            <a href="./blog2.html" class="block"><h3 class="heading-h4 mb-2 hover:text-primary transition-colors cursor-pointer">The Future of Flexible Work in 2024</h3></a>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4 grow">Explore how the coworking industry is evolving and what changes are coming next year.</p>
+                            <p class="text-sm text-slate-500 font-semibold">Dec 18, 2024</p>
                         </div>
-                         <a href="./blog2.html" class="block"><h3 class="heading-h4 mb-2 hover:text-primary transition-colors cursor-pointer">The Future of Flexible Work in 2024</h3></a>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">Explore how the coworking industry is evolving and what changes are coming next year.</p>
-                        <p class="text-sm text-slate-500">Dec 18, 2024</p>
                     </article>
 
                     <!-- Post 3 -->
-                    <article class="card-elevated hover:shadow-lg transition-shadow cursor-pointer group">
-                        <div class="h-48 relative mb-4 rounded-lg overflow-hidden">
+                    <article class="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group overflow-hidden flex flex-col">
+                        <div class="h-48 relative overflow-hidden shrink-0">
                             <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=600&q=80" alt="Building Strong Communities in Coworking Spaces" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-20"></div>
                         </div>
-                        <div class="flex gap-2 mb-3">
-                            <span class="badge badge-primary">Community</span>
-                            <span class="text-xs text-slate-500">4 min read</span>
+                        <div class="p-8 flex flex-col grow">
+                            <div class="flex gap-2 mb-3">
+                                <span class="badge badge-primary">Community</span>
+                            </div>
+                            <a href="./blog3.html" class="block"><h3 class="heading-h4 mb-2 hover:text-primary transition-colors cursor-pointer">Building Strong Communities in Coworking Spaces</h3></a>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4 grow">Learn how great community-building creates lasting professional relationships and mutual success.</p>
+                            <p class="text-sm text-slate-500 font-semibold">Dec 15, 2024</p>
                         </div>
-                         <a href="./blog3.html" class="block"><h3 class="heading-h4 mb-2 hover:text-primary transition-colors cursor-pointer">Building Strong Communities in Coworking Spaces</h3></a>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">Learn how great community-building creates lasting professional relationships and mutual success.</p>
-                        <p class="text-sm text-slate-500">Dec 15, 2024</p>
                     </article>
 
                     <!-- Post 4 -->
-                    <article class="card-elevated hover:shadow-lg transition-shadow cursor-pointer group">
-                        <div class="h-48 relative mb-4 rounded-lg overflow-hidden">
+                    <article class="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group overflow-hidden flex flex-col">
+                        <div class="h-48 relative overflow-hidden shrink-0">
                             <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Eco-Friendly Coworking: Building Sustainable Workspaces" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-20"></div>
                         </div>
-                        <div class="flex gap-2 mb-3">
-                            <span class="badge badge-secondary">Sustainability</span>
-                            <span class="text-xs text-slate-500">6 min read</span>
+                        <div class="p-8 flex flex-col grow">
+                            <div class="flex gap-2 mb-3">
+                                <span class="badge badge-secondary">Sustainability</span>
+                            </div>
+                            <a href="./blog4.html" class="block"><h3 class="heading-h4 mb-2 hover:text-primary transition-colors cursor-pointer">Eco-Friendly Coworking: Building Sustainable Workspaces</h3></a>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4 grow">Discover how coworking spaces are leading the charge in sustainable and eco-conscious workplace design.</p>
+                            <p class="text-sm text-slate-500 font-semibold">Dec 12, 2024</p>
                         </div>
-                         <a href="./blog4.html" class="block"><h3 class="heading-h4 mb-2 hover:text-primary transition-colors cursor-pointer">Eco-Friendly Coworking: Building Sustainable Workspaces</h3></a>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">Discover how coworking spaces are leading the charge in sustainable and eco-conscious workplace design.</p>
-                        <p class="text-sm text-slate-500">Dec 12, 2024</p>
                     </article>
 
                     <!-- Post 5 -->
-                    <article class="card-elevated hover:shadow-lg transition-shadow cursor-pointer group">
-                        <div class="h-48 relative mb-4 rounded-lg overflow-hidden">
+                    <article class="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group overflow-hidden flex flex-col">
+                        <div class="h-48 relative overflow-hidden shrink-0">
                             <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Strengthening Team Bonds in Remote Environments" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-20"></div>
                         </div>
-                        <div class="flex gap-2 mb-3">
-                            <span class="badge badge-primary">Team Building</span>
-                            <span class="text-xs text-slate-500">5 min read</span>
+                        <div class="p-8 flex flex-col grow">
+                            <div class="flex gap-2 mb-3">
+                                <span class="badge badge-primary">Team Building</span>
+                            </div>
+                            <a href="./blog5.html" class="block"><h3 class="heading-h4 mb-2 hover:text-primary transition-colors cursor-pointer">Strengthening Team Bonds in Remote Environments</h3></a>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4 grow">Tips and strategies for maintaining strong team connections when working in flexible, distributed environments.</p>
+                            <p class="text-sm text-slate-500 font-semibold">Dec 10, 2024</p>
                         </div>
-                         <a href="./blog5.html" class="block"><h3 class="heading-h4 mb-2 hover:text-primary transition-colors cursor-pointer">Strengthening Team Bonds in Remote Environments</h3></a>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">Tips and strategies for maintaining strong team connections when working in flexible, distributed environments.</p>
-                        <p class="text-sm text-slate-500">Dec 10, 2024</p>
                     </article>
 
                     <!-- Post 6 -->
-                    <article class="card-elevated hover:shadow-lg transition-shadow cursor-pointer group">
-                        <div class="h-48 relative mb-4 rounded-lg overflow-hidden">
+                    <article class="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group overflow-hidden flex flex-col">
+                        <div class="h-48 relative overflow-hidden shrink-0">
                             <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80" alt="Success Stories: How Startups Thrive at CoSpace" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-20"></div>
                         </div>
-                        <div class="flex gap-2 mb-3">
-                            <span class="badge badge-secondary">Success Stories</span>
-                            <span class="text-xs text-slate-500">8 min read</span>
+                        <div class="p-8 flex flex-col grow">
+                            <div class="flex gap-2 mb-3">
+                                <span class="badge badge-secondary">Success Stories</span>
+                            </div>
+                            <a href="./blog6.html" class="block"><h3 class="heading-h4 mb-2 hover:text-primary transition-colors cursor-pointer">Success Stories: How Startups Thrive at CoSpace</h3></a>
+                            <p class="text-slate-600 dark:text-slate-400 mb-4 grow">Real stories from entrepreneurs who found success by choosing CoSpace for their workspace needs.</p>
+                            <p class="text-sm text-slate-500 font-semibold">Dec 8, 2024</p>
                         </div>
-                         <a href="./blog6.html" class="block"><h3 class="heading-h4 mb-2 hover:text-primary transition-colors cursor-pointer">Success Stories: How Startups Thrive at CoSpace</h3></a>
-                        <p class="text-slate-600 dark:text-slate-400 mb-4">Real stories from entrepreneurs who found success by choosing CoSpace for their workspace needs.</p>
-                        <p class="text-sm text-slate-500">Dec 8, 2024</p>
                     </article>
                 </div>
 

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./src/input.css",
-    "watch": "tailwindcss -i ./src/input.css -o ./src/input.css --watch"
+    "build": "tailwindcss -i ./src/tailwind-source.css -o ./src/input.css",
+    "watch": "tailwindcss -i ./src/tailwind-source.css -o ./src/input.css --watch"
   },
   "keywords": [],
   "author": "",
