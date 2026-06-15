@@ -35,19 +35,19 @@
                 <div>
                     <p class="px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Menu</p>
                     <nav class="space-y-1">
-                        <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary font-medium transition-colors">
+                        <a href="#overview" data-target="overview" class="sidebar-link flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary font-medium transition-colors">
                             <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
                             Dashboard Overview
                         </a>
-                        <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                        <a href="#my-bookings" data-target="my-bookings" class="sidebar-link flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
                             <i data-lucide="calendar" class="w-5 h-5"></i>
                             My Bookings
                         </a>
-                        <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                        <a href="#room-availability" data-target="room-availability" class="sidebar-link flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
                             <i data-lucide="clock" class="w-5 h-5"></i>
                             Room Availability
                         </a>
-                        <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                        <a href="#booking-history" data-target="booking-history" class="sidebar-link flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
                             <i data-lucide="history" class="w-5 h-5"></i>
                             Booking History
                         </a>
@@ -58,26 +58,26 @@
                 <div>
                     <p class="px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Account</p>
                     <nav class="space-y-1">
-                        <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                        <a href="#membership" data-target="membership" class="sidebar-link flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
                             <i data-lucide="credit-card" class="w-5 h-5"></i>
                             Membership Details
                         </a>
-                        <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                        <a href="#invoices" data-target="invoices" class="sidebar-link flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
                             <i data-lucide="file-text" class="w-5 h-5"></i>
                             Invoices
                         </a>
-                        <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                        <a href="#notifications" data-target="notifications" class="sidebar-link flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
                             <div class="flex items-center gap-3">
                                 <i data-lucide="bell" class="w-5 h-5"></i>
                                 Notifications
                             </div>
-                            <span class="bg-rose-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">3</span>
+                            <span id="notifications-sidebar-badge" class="bg-rose-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">3</span>
                         </a>
-                        <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                        <a href="#profile" data-target="profile" class="sidebar-link flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
                             <i data-lucide="user" class="w-5 h-5"></i>
                             Profile
                         </a>
-                        <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                        <a href="#account-settings" data-target="account-settings" class="sidebar-link flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
                             <i data-lucide="settings" class="w-5 h-5"></i>
                             Account Settings
                         </a>
@@ -88,7 +88,7 @@
                 <div>
                     <p class="px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Help</p>
                     <nav class="space-y-1">
-                        <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                        <a href="#support" data-target="support" class="sidebar-link flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
                             <i data-lucide="help-circle" class="w-5 h-5"></i>
                             Support
                         </a>
@@ -102,10 +102,10 @@
             
             <!-- Sidebar Footer / User -->
             <div class="p-4 border-t border-gray-200 dark:border-slate-800 flex items-center gap-3 shrink-0">
-                <img src="https://i.pravatar.cc/150?img=11" alt="Avatar" class="w-10 h-10 rounded-full border border-gray-200 dark:border-slate-700">
+                <img id="user-sidebar-avatar" src="https://i.pravatar.cc/150?img=11" alt="Avatar" class="w-10 h-10 rounded-full border border-gray-200 dark:border-slate-700">
                 <div class="overflow-hidden">
-                    <p class="text-sm font-bold truncate">John Doe</p>
-                    <p class="text-xs text-slate-500 truncate">Pro Member</p>
+                    <p id="user-sidebar-name" class="text-sm font-bold truncate">John Doe</p>
+                    <p id="user-sidebar-plan" class="text-xs text-slate-500 truncate">Pro Member</p>
                 </div>
             </div>
         </aside>
@@ -139,10 +139,6 @@
                         <i data-lucide="moon" class="w-5 h-5 hidden dark:block"></i>
                     </button>
 
-                    <button class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 text-slate-500 focus-ring relative">
-                        <i data-lucide="bell" class="w-5 h-5"></i>
-                        <span class="absolute top-1 right-1 w-2.5 h-2.5 bg-rose-500 rounded-full border-2 border-white dark:border-slate-900"></span>
-                    </button>
                 </div>
             </header>
 
@@ -150,207 +146,608 @@
             <main class="flex-1 overflow-y-auto p-4 md:p-8">
                 <div class="max-w-7xl mx-auto space-y-8">
                     
-                    <!-- Welcome Section -->
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                        <div>
-                            <h1 class="heading-h2 flex items-center gap-2">Welcome Back, John! <i data-lucide="smile" class="w-8 h-8 text-amber-400 fill-amber-100 dark:fill-amber-900/50"></i></h1>
-                            <p class="text-slate-600 dark:text-slate-400 mt-1">Here's what's happening with your workspace today.</p>
-                        </div>
-                        <button class="btn btn-primary shadow-lg shadow-primary/20 flex items-center gap-2 self-start md:self-auto">
-                            <i data-lucide="calendar-plus" class="w-4 h-4"></i>
-                            New Booking
-                        </button>
-                    </div>
-
-                    <!-- Stats Cards -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div class="card bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:shadow-lg transition-shadow">
-                            <div class="flex justify-between items-start mb-4">
-                                <div>
-                                    <p class="text-slate-500 text-sm font-medium mb-1">Active Plan</p>
-                                    <p class="heading-h4 text-slate-900 dark:text-white">Dedicated Desk</p>
-                                </div>
-                                <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-                                    <i data-lucide="layout" class="w-5 h-5"></i>
-                                </div>
+                    <!-- 1. OVERVIEW VIEW (Default) -->
+                    <div id="view-overview" class="dashboard-view space-y-8">
+                        <!-- Welcome Section -->
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                            <div>
+                                <h1 class="heading-h2 flex items-center gap-2">Welcome Back, <span id="user-greeting-name">John</span>! <i data-lucide="smile" class="w-8 h-8 text-amber-400 fill-amber-100 dark:fill-amber-900/50"></i></h1>
+                                <p class="text-slate-600 dark:text-slate-400 mt-1">Here's what's happening with your workspace today.</p>
                             </div>
-                            <p class="text-sm text-slate-600 dark:text-slate-400 flex items-center gap-1">
-                                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Floor 1, Desk 24
-                            </p>
+                            <a href="booking.html" class="btn btn-primary shadow-lg shadow-primary/20 flex items-center gap-2 self-start md:self-auto">
+                                <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+                                New Booking
+                            </a>
                         </div>
 
-                        <div class="card bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:shadow-lg transition-shadow">
-                            <div class="flex justify-between items-start mb-4">
-                                <div>
-                                    <p class="text-slate-500 text-sm font-medium mb-1">Days Remaining</p>
-                                    <p class="heading-h4 text-slate-900 dark:text-white">28</p>
-                                </div>
-                                <div class="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center">
-                                    <i data-lucide="calendar" class="w-5 h-5"></i>
-                                </div>
-                            </div>
-                            <p class="text-sm text-slate-600 dark:text-slate-400 flex items-center gap-1">
-                                <i data-lucide="credit-card" class="w-3.5 h-3.5"></i> Next billing: Jan 15
-                            </p>
-                        </div>
-
-                        <div class="card bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:shadow-lg transition-shadow">
-                            <div class="flex justify-between items-start mb-4">
-                                <div>
-                                    <p class="text-slate-500 text-sm font-medium mb-1">Meeting Hours Used</p>
-                                    <p class="heading-h4 text-slate-900 dark:text-white">2 / 4 hrs</p>
-                                </div>
-                                <div class="w-10 h-10 rounded-full bg-accent/10 text-accent flex items-center justify-center">
-                                    <i data-lucide="clock" class="w-5 h-5"></i>
-                                </div>
-                            </div>
-                            <div class="w-full bg-gray-100 dark:bg-slate-800 rounded-full h-2 mt-3 overflow-hidden">
-                                <div class="bg-accent h-2 rounded-full" style="width: 50%"></div>
-                            </div>
-                        </div>
-
-                        <div class="card bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:shadow-lg transition-shadow">
-                            <div class="flex justify-between items-start mb-4">
-                                <div>
-                                    <p class="text-slate-500 text-sm font-medium mb-1">Account Status</p>
-                                    <p class="heading-h4 text-emerald-600 dark:text-emerald-400">Active</p>
-                                </div>
-                                <div class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
-                                    <i data-lucide="check-circle" class="w-5 h-5"></i>
-                                </div>
-                            </div>
-                            <p class="text-sm text-slate-600 dark:text-slate-400 flex items-center gap-1">
-                                <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Good standing
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Main Dashboard Content Grid -->
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                        
-                        <!-- Left Column (Span 2) -->
-                        <div class="lg:col-span-2 space-y-8">
-                            
-                            <!-- Upcoming Bookings -->
-                            <div class="card-elevated bg-white dark:bg-slate-900">
-                                <div class="flex items-center justify-between mb-6">
-                                    <h2 class="heading-h3 flex items-center gap-2"><i data-lucide="calendar" class="w-5 h-5 text-primary"></i> Upcoming Bookings</h2>
-                                    <a href="#" class="text-sm text-primary font-semibold hover:underline">View All</a>
-                                </div>
-                                
-                                <div class="space-y-4">
-                                    <!-- Booking 1 -->
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 border border-gray-100 dark:border-slate-800 rounded-xl hover:border-primary/30 transition-colors gap-4">
-                                        <div class="flex items-start gap-4">
-                                            <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex flex-col items-center justify-center shrink-0">
-                                                <span class="text-xs font-bold uppercase">Jan</span>
-                                                <span class="text-lg font-bold leading-none">12</span>
-                                            </div>
-                                            <div>
-                                                <h4 class="font-bold text-slate-900 dark:text-white">The Boardroom</h4>
-                                                <p class="text-sm text-slate-500 flex items-center gap-1 mt-1">
-                                                    <i data-lucide="clock" class="w-3.5 h-3.5"></i> 2:00 PM - 3:00 PM
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-3 self-end sm:self-auto">
-                                            <span class="badge badge-primary bg-primary/10 text-primary border-none">Confirmed</span>
-                                            <button class="p-2 text-slate-400 hover:text-rose-500 transition-colors" title="Cancel Booking"><i data-lucide="x" class="w-4 h-4"></i></button>
-                                        </div>
-                                    </div>
-
-                                    <!-- Booking 2 -->
-                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between p-4 border border-gray-100 dark:border-slate-800 rounded-xl hover:border-primary/30 transition-colors gap-4">
-                                        <div class="flex items-start gap-4">
-                                            <div class="w-12 h-12 bg-gray-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-lg flex flex-col items-center justify-center shrink-0">
-                                                <span class="text-xs font-bold uppercase">Jan</span>
-                                                <span class="text-lg font-bold leading-none">15</span>
-                                            </div>
-                                            <div>
-                                                <h4 class="font-bold text-slate-900 dark:text-white">Focus Pod B</h4>
-                                                <p class="text-sm text-slate-500 flex items-center gap-1 mt-1">
-                                                    <i data-lucide="clock" class="w-3.5 h-3.5"></i> 10:00 AM - 12:00 PM
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="flex items-center gap-3 self-end sm:self-auto">
-                                            <span class="badge bg-gray-100 text-gray-700 dark:bg-slate-800 dark:text-slate-300 border-none">Upcoming</span>
-                                            <button class="p-2 text-slate-400 hover:text-rose-500 transition-colors" title="Cancel Booking"><i data-lucide="x" class="w-4 h-4"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Quick Actions -->
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <a href="#" class="card p-5 border border-gray-100 dark:border-slate-800 hover:shadow-lg hover:border-primary/50 transition-all flex items-start gap-4 group">
-                                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
-                                        <i data-lucide="users" class="w-6 h-6"></i>
-                                    </div>
+                        <!-- Stats Cards -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="card bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:shadow-lg transition-shadow">
+                                <div class="flex justify-between items-start mb-4">
                                     <div>
-                                        <h4 class="font-bold mb-1 group-hover:text-primary transition-colors">Guest Passes</h4>
-                                        <p class="text-sm text-slate-500">Register visitors for your office</p>
+                                        <p class="text-slate-500 text-sm font-medium mb-1">Active Plan</p>
+                                        <p class="heading-h4 text-slate-900 dark:text-white" id="stat-active-plan">Dedicated Desk</p>
                                     </div>
-                                </a>
-                                <a href="#" class="card p-5 border border-gray-100 dark:border-slate-800 hover:shadow-lg hover:border-secondary/50 transition-all flex items-start gap-4 group">
-                                    <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary shrink-0 group-hover:scale-110 transition-transform">
-                                        <i data-lucide="printer" class="w-6 h-6"></i>
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                                        <i data-lucide="layout" class="w-5 h-5"></i>
                                     </div>
-                                    <div>
-                                        <h4 class="font-bold mb-1 group-hover:text-secondary transition-colors">Print Services</h4>
-                                        <p class="text-sm text-slate-500">Add printing credits to account</p>
-                                    </div>
-                                </a>
+                                </div>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 flex items-center gap-1">
+                                    <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Floor 1, Desk 24
+                                </p>
                             </div>
 
+                            <div class="card bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:shadow-lg transition-shadow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <p class="text-slate-500 text-sm font-medium mb-1">Days Remaining</p>
+                                        <p class="heading-h4 text-slate-900 dark:text-white">28</p>
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center">
+                                        <i data-lucide="calendar" class="w-5 h-5"></i>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 flex items-center gap-1">
+                                    <i data-lucide="credit-card" class="w-3.5 h-3.5"></i> Next billing: Jan 15
+                                </p>
+                            </div>
+
+                            <div class="card bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:shadow-lg transition-shadow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <p class="text-slate-500 text-sm font-medium mb-1">Meeting Hours Used</p>
+                                        <p class="heading-h4 text-slate-900 dark:text-white">2 / 4 hrs</p>
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full bg-accent/10 text-accent flex items-center justify-center">
+                                        <i data-lucide="clock" class="w-5 h-5"></i>
+                                    </div>
+                                </div>
+                                <div class="w-full bg-gray-100 dark:bg-slate-800 rounded-full h-2 mt-3 overflow-hidden">
+                                    <div class="bg-accent h-2 rounded-full" style="width: 50%"></div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:shadow-lg transition-shadow">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <p class="text-slate-500 text-sm font-medium mb-1">Account Status</p>
+                                        <p class="heading-h4 text-emerald-600 dark:text-emerald-400">Active</p>
+                                    </div>
+                                    <div class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+                                        <i data-lucide="check-circle" class="w-5 h-5"></i>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-slate-600 dark:text-slate-400 flex items-center gap-1">
+                                    <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Good standing
+                                </p>
+                            </div>
                         </div>
 
-                        <!-- Right Column (Span 1) -->
-                        <div class="space-y-8">
+                        <!-- Main Dashboard Content Grid -->
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                             
-                            <!-- Support / Action -->
-                            <div class="card-elevated bg-gradient-to-br from-primary to-primary-dark text-white border-none shadow-primary/20 shadow-xl relative overflow-hidden">
-                                <div class="absolute top-0 right-0 p-4 opacity-20">
-                                    <i data-lucide="help-circle" class="w-24 h-24"></i>
-                                </div>
-                                <div class="relative z-10">
-                                    <h3 class="heading-h4 mb-2 text-white">Need Assistance?</h3>
-                                    <p class="text-white/80 text-sm mb-6">Our community team is here to help with IT, booking, or general inquiries.</p>
-                                    <button class="btn bg-white text-primary hover:bg-gray-50 w-full shadow-md">Open Support Ticket</button>
-                                </div>
-                            </div>
-
-                            <!-- Community Events -->
-                            <div class="card-elevated bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800">
-                                <div class="flex items-center justify-between mb-6">
-                                    <h3 class="heading-h4 flex items-center gap-2"><i data-lucide="sparkles" class="w-5 h-5 text-amber-500"></i> Events</h3>
-                                </div>
-                                <div class="space-y-4">
-                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors border border-transparent hover:border-gray-100 dark:hover:border-slate-800 cursor-pointer">
-                                        <div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
-                                            <i data-lucide="coffee" class="w-5 h-5"></i>
-                                        </div>
-                                        <div>
-                                            <p class="font-bold text-sm text-slate-900 dark:text-white">Networking Breakfast</p>
-                                            <p class="text-xs text-slate-500 mt-0.5">Jan 15 • 8:00 AM • Main Cafe</p>
-                                        </div>
+                            <!-- Left Column (Span 2) -->
+                            <div class="lg:col-span-2 space-y-8">
+                                <!-- Upcoming Bookings -->
+                                <div class="card-elevated bg-white dark:bg-slate-900">
+                                    <div class="flex items-center justify-between mb-6">
+                                        <h2 class="heading-h3 flex items-center gap-2"><i data-lucide="calendar" class="w-5 h-5 text-primary"></i> Upcoming Bookings</h2>
+                                        <a href="#my-bookings" class="text-sm text-primary font-semibold hover:underline">View All</a>
                                     </div>
                                     
-                                    <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors border border-transparent hover:border-gray-100 dark:hover:border-slate-800 cursor-pointer">
-                                        <div class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
-                                            <i data-lucide="monitor-play" class="w-5 h-5"></i>
+                                    <div class="space-y-4" id="overview-bookings-list">
+                                        <!-- Booking 1 -->
+                                        <div id="booking-item-1" class="flex flex-col sm:flex-row sm:items-center justify-between p-4 border border-gray-100 dark:border-slate-800 rounded-xl hover:border-primary/30 transition-colors gap-4">
+                                            <div class="flex items-start gap-4">
+                                                <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex flex-col items-center justify-center shrink-0">
+                                                    <span class="text-xs font-bold uppercase">Jan</span>
+                                                    <span class="text-lg font-bold leading-none">12</span>
+                                                </div>
+                                                <div>
+                                                    <h4 class="font-bold text-slate-900 dark:text-white">The Boardroom</h4>
+                                                    <p class="text-sm text-slate-500 flex items-center gap-1 mt-1">
+                                                        <i data-lucide="clock" class="w-3.5 h-3.5"></i> 2:00 PM - 3:00 PM
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center gap-3 self-end sm:self-auto">
+                                                <span class="badge bg-amber-100 text-amber-700 dark:bg-amber-500/10 dark:text-amber-400 border-none font-bold">Pending Approval</span>
+                                                <button onclick="cancelBooking(1)" class="p-2 text-slate-400 hover:text-rose-500 transition-colors" title="Cancel Booking"><i data-lucide="x" class="w-4 h-4"></i></button>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <p class="font-bold text-sm text-slate-900 dark:text-white">Tech Talk: AI Tools</p>
-                                            <p class="text-xs text-slate-500 mt-0.5">Jan 18 • 12:00 PM • Event Space</p>
+
+                                        <!-- Booking 2 -->
+                                        <div id="booking-item-2" class="flex flex-col sm:flex-row sm:items-center justify-between p-4 border border-gray-100 dark:border-slate-800 rounded-xl hover:border-primary/30 transition-colors gap-4">
+                                            <div class="flex items-start gap-4">
+                                                <div class="w-12 h-12 bg-gray-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-lg flex flex-col items-center justify-center shrink-0">
+                                                    <span class="text-xs font-bold uppercase">Jan</span>
+                                                    <span class="text-lg font-bold leading-none">15</span>
+                                                </div>
+                                                <div>
+                                                    <h4 class="font-bold text-slate-900 dark:text-white">Focus Pod B</h4>
+                                                    <p class="text-sm text-slate-500 flex items-center gap-1 mt-1">
+                                                        <i data-lucide="clock" class="w-3.5 h-3.5"></i> 10:00 AM - 12:00 PM
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-center gap-3 self-end sm:self-auto">
+                                                <span class="badge bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 border-none font-bold">Confirmed</span>
+                                                <button onclick="cancelBooking(2)" class="p-2 text-slate-400 hover:text-rose-500 transition-colors" title="Cancel Booking"><i data-lucide="x" class="w-4 h-4"></i></button>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div id="overview-bookings-empty" class="hidden text-center py-8">
+                                        <i data-lucide="calendar" class="w-10 h-10 text-slate-300 mx-auto mb-2"></i>
+                                        <p class="text-slate-500 font-medium">No upcoming bookings</p>
+                                    </div>
                                 </div>
-                                <button class="btn btn-ghost w-full mt-4 text-sm font-semibold border border-gray-200 dark:border-slate-700">View Event Calendar</button>
+
+                                <!-- Quick Actions -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <a href="#room-availability" class="card p-5 border border-gray-100 dark:border-slate-800 hover:shadow-lg hover:border-primary/50 transition-all flex items-start gap-4 group">
+                                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
+                                            <i data-lucide="users" class="w-6 h-6"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold mb-1 group-hover:text-primary transition-colors">Room Availability</h4>
+                                            <p class="text-sm text-slate-500">Check hourly availability slots</p>
+                                        </div>
+                                    </a>
+                                    <a href="#support" class="card p-5 border border-gray-100 dark:border-slate-800 hover:shadow-lg hover:border-secondary/50 transition-all flex items-start gap-4 group">
+                                        <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary shrink-0 group-hover:scale-110 transition-transform">
+                                            <i data-lucide="life-buoy" class="w-6 h-6"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold mb-1 group-hover:text-secondary transition-colors">Help & Support</h4>
+                                            <p class="text-sm text-slate-500">Submit requests directly to admin</p>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
 
+                            <!-- Right Column (Span 1) -->
+                            <div class="space-y-8">
+                                <!-- Support / Action -->
+                                <div class="card-elevated bg-gradient-to-br from-primary to-primary-dark text-white border-none shadow-primary/20 shadow-xl relative overflow-hidden">
+                                    <div class="absolute top-0 right-0 p-4 opacity-20">
+                                        <i data-lucide="help-circle" class="w-24 h-24"></i>
+                                    </div>
+                                    <div class="relative z-10">
+                                        <h3 class="heading-h4 mb-2 text-white">Need Assistance?</h3>
+                                        <p class="text-white/80 text-sm mb-6">Our community team is here to help with IT, booking, or general inquiries.</p>
+                                        <a href="#support" class="btn bg-white text-primary hover:bg-gray-50 w-full text-center block font-semibold shadow-md">Open Support Ticket</a>
+                                    </div>
+                                </div>
+
+                                <!-- Community Events -->
+                                <div class="card-elevated bg-white dark:bg-slate-900 border border-gray-100 dark:border-slate-800">
+                                    <div class="flex items-center justify-between mb-6">
+                                        <h3 class="heading-h4 flex items-center gap-2"><i data-lucide="sparkles" class="w-5 h-5 text-amber-500"></i> Events</h3>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors border border-transparent hover:border-gray-100 dark:hover:border-slate-800 cursor-pointer">
+                                            <div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                                                <i data-lucide="coffee" class="w-5 h-5"></i>
+                                            </div>
+                                            <div>
+                                                <p class="font-bold text-sm text-slate-900 dark:text-white">Networking Breakfast</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">Jan 15 • 8:00 AM • Main Cafe</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors border border-transparent hover:border-gray-100 dark:hover:border-slate-800 cursor-pointer">
+                                            <div class="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
+                                                <i data-lucide="monitor-play" class="w-5 h-5"></i>
+                                            </div>
+                                            <div>
+                                                <p class="font-bold text-sm text-slate-900 dark:text-white">Tech Talk: AI Tools</p>
+                                                <p class="text-xs text-slate-500 mt-0.5">Jan 18 • 12:00 PM • Event Space</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-ghost w-full mt-4 text-sm font-semibold border border-gray-200 dark:border-slate-700">View Event Calendar</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- 2. MY BOOKINGS VIEW -->
+                    <div id="view-my-bookings" class="dashboard-view hidden space-y-8">
+                        <div class="flex justify-between items-center flex-wrap gap-4">
+                            <div>
+                                <h1 class="heading-h2">My Bookings</h1>
+                                <p class="text-slate-600 dark:text-slate-400 mt-1">Review upcoming work spaces, check in, or cancel slots.</p>
+                            </div>
+                            <a href="booking.html" class="btn btn-primary flex items-center gap-2"><i data-lucide="calendar-plus" class="w-4 h-4"></i> Reserve New Space</a>
+                        </div>
+
+                        <!-- Bookings list -->
+                        <div class="card-elevated bg-white dark:bg-slate-900 p-6">
+                            <h3 class="heading-h4 mb-4">Upcoming Reservations</h3>
+                            <div class="space-y-4" id="my-bookings-list">
+                                <!-- Duplicated logic linked with state -->
+                                <div id="booking-card-1" class="p-4 border border-gray-100 dark:border-slate-800 rounded-xl hover:border-primary/20 transition-all flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex flex-col items-center justify-center font-bold">
+                                            <span class="text-[10px] uppercase">Jan</span>
+                                            <span class="text-lg leading-none">12</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">The Boardroom</h4>
+                                            <p class="text-xs text-slate-500 flex items-center gap-1 mt-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 2:00 PM - 3:00 PM</p>
+                                            <p class="text-xs text-slate-500 flex items-center gap-1 mt-0.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Floor 2, Room A</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                                        <span class="badge bg-amber-100 text-amber-700 dark:bg-amber-500/10 dark:text-amber-400 border-none font-bold text-xs">Pending Approval</span>
+                                        <button onclick="cancelBooking(1)" class="btn btn-outline btn-sm text-rose-500 border-rose-500 hover:bg-rose-500 hover:text-white px-3">Cancel</button>
+                                    </div>
+                                </div>
+
+                                <div id="booking-card-2" class="p-4 border border-gray-100 dark:border-slate-800 rounded-xl hover:border-primary/20 transition-all flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                                    <div class="flex items-center gap-4">
+                                        <div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-slate-800 text-slate-500 flex flex-col items-center justify-center font-bold">
+                                            <span class="text-[10px] uppercase">Jan</span>
+                                            <span class="text-lg leading-none">15</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Focus Pod B</h4>
+                                            <p class="text-xs text-slate-500 flex items-center gap-1 mt-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 10:00 AM - 12:00 PM</p>
+                                            <p class="text-xs text-slate-500 flex items-center gap-1 mt-0.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Floor 1, Pods Section</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                                        <span class="badge bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 border-none font-bold text-xs">Confirmed</span>
+                                        <button onclick="cancelBooking(2)" class="btn btn-outline btn-sm text-rose-500 border-rose-500 hover:bg-rose-500 hover:text-white px-3">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="my-bookings-empty" class="hidden text-center py-12">
+                                <i data-lucide="calendar" class="w-12 h-12 text-slate-300 mx-auto mb-4"></i>
+                                <h4 class="font-bold">No active reservations</h4>
+                                <p class="text-slate-500 text-sm mt-1">Book desk space to get started.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. ROOM AVAILABILITY VIEW -->
+                    <div id="view-room-availability" class="dashboard-view hidden space-y-8">
+                        <div>
+                            <h1 class="heading-h2">Room Availability</h1>
+                            <p class="text-slate-600 dark:text-slate-400 mt-1">Check real-time availability slots and instantly book meeting rooms.</p>
+                        </div>
+
+                        <!-- Availability Schedule Grid -->
+                        <div class="card bg-white dark:bg-slate-900 border border-gray-150 dark:border-slate-800 p-6">
+                            <div class="flex items-center justify-between flex-wrap gap-4 border-b border-gray-150 dark:border-slate-850 pb-4 mb-6">
+                                <h3 class="font-bold text-lg">Today's Hourly Grid</h3>
+                                <select id="availability-room-select" class="select w-48 text-sm" onchange="changeAvailabilityRoom(this.value)">
+                                    <option value="boardroom">The Boardroom</option>
+                                    <option value="focuspod">Focus Pod B</option>
+                                </select>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="availability-grid">
+                                <!-- Populated dynamically by JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. BOOKING HISTORY VIEW -->
+                    <div id="view-booking-history" class="dashboard-view hidden space-y-8">
+                        <div>
+                            <h1 class="heading-h2">Booking History</h1>
+                            <p class="text-slate-600 dark:text-slate-400 mt-1">View list of past reservations, workspace stays, and payment summaries.</p>
+                        </div>
+
+                        <!-- History Table -->
+                        <div class="card bg-white dark:bg-slate-900 border border-gray-150 dark:border-slate-800 overflow-hidden shadow-sm">
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left border-collapse text-sm">
+                                    <thead>
+                                        <tr class="border-b border-gray-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/20 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                                            <th class="p-4">Workspace</th>
+                                            <th class="p-4">Period</th>
+                                            <th class="p-4">Duration</th>
+                                            <th class="p-4">Total Price</th>
+                                            <th class="p-4">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-150 dark:divide-slate-800">
+                                        <tr>
+                                            <td class="p-4 font-bold">Dedicated Desk 12</td>
+                                            <td class="p-4 text-slate-500">Jan 10, 2026</td>
+                                            <td class="p-4">1 Day</td>
+                                            <td class="p-4 font-semibold text-slate-800 dark:text-slate-200">$50.00</td>
+                                            <td class="p-4"><span class="badge bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400 text-xs border-none font-bold">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-4 font-bold">Hot Desk 04</td>
+                                            <td class="p-4 text-slate-500">Dec 15, 2025</td>
+                                            <td class="p-4">1 Day</td>
+                                            <td class="p-4 font-semibold text-slate-800 dark:text-slate-200">$25.00</td>
+                                            <td class="p-4"><span class="badge bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400 text-xs border-none font-bold">Completed</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. MEMBERSHIP DETAILS VIEW -->
+                    <div id="view-membership" class="dashboard-view hidden space-y-8">
+                        <div>
+                            <h1 class="heading-h2">Membership Details</h1>
+                            <p class="text-slate-600 dark:text-slate-400 mt-1">Review active member status, payment methods, and upcoming renewals.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                            <!-- Active Plan Summary (2 cols) -->
+                            <div class="lg:col-span-2 card bg-white dark:bg-slate-900 border border-gray-150 dark:border-slate-800 p-6 space-y-6">
+                                <div class="flex justify-between items-start flex-wrap gap-4">
+                                    <div>
+                                        <span class="badge bg-amber-100 text-amber-700 dark:bg-amber-500/10 dark:text-amber-400 font-bold border-none text-xs">PRO MEMBER</span>
+                                        <h3 class="heading-h3 text-slate-950 dark:text-white mt-2" id="membership-plan-title">Dedicated Desk Plan</h3>
+                                        <p class="text-sm text-slate-500 mt-1">Personal desk assigned 24/7 on Floor 1, Space 24.</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-xs font-bold uppercase text-slate-400">Monthly Fee</p>
+                                        <h2 class="heading-h2 text-primary mt-1">$350.00</h2>
+                                    </div>
+                                </div>
+
+                                <div class="border-t border-gray-100 dark:border-slate-850 pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-lg bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 flex items-center justify-center"><i data-lucide="wifi" class="w-5 h-5"></i></div>
+                                        <div><p class="font-bold text-sm">Gigabit Internet</p><p class="text-xs text-slate-500">Fast, unlimited connections</p></div>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-lg bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 flex items-center justify-center"><i data-lucide="clock" class="w-5 h-5"></i></div>
+                                        <div><p class="font-bold text-sm">Meeting Hours</p><p class="text-xs text-slate-500">4 free credits/mo</p></div>
+                                    </div>
+                                </div>
+
+                                <div class="border-t border-gray-100 dark:border-slate-850 pt-6 flex justify-between gap-4 flex-wrap">
+                                    <button class="btn btn-outline border-gray-200 dark:border-slate-800" onclick="showToast('Downgrade requested. Community Manager will contact you.')">Downgrade Plan</button>
+                                    <button class="btn btn-primary" onclick="showToast('Upgrade panel maintenance. Contact admin.')">Upgrade Plan</button>
+                                </div>
+                            </div>
+
+                            <!-- Payment Card (1 col) -->
+                            <div class="card bg-white dark:bg-slate-900 border border-gray-150 dark:border-slate-800 p-6 space-y-6">
+                                <h3 class="font-bold text-lg">Billing Info</h3>
+                                
+                                <div class="p-4 bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-xl space-y-6">
+                                    <div class="flex justify-between items-center"><i data-lucide="nfc" class="w-6 h-6 text-white/50"></i><span class="text-xs font-bold font-mono">VISA</span></div>
+                                    <p class="font-mono text-lg tracking-wider">•••• •••• •••• 4921</p>
+                                    <div class="flex justify-between items-center text-xs"><span class="font-bold">JOHN DOE</span><span>12 / 28</span></div>
+                                </div>
+
+                                <div class="space-y-2 text-sm">
+                                    <div class="flex justify-between"><span class="text-slate-500">Next Billing</span><span class="font-bold text-slate-900 dark:text-white">Jan 15, 2026</span></div>
+                                    <div class="flex justify-between"><span class="text-slate-500">Payment Status</span><span class="text-emerald-500 font-bold">Good Standing</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. INVOICES VIEW -->
+                    <div id="view-invoices" class="dashboard-view hidden space-y-8">
+                        <div>
+                            <h1 class="heading-h2">Invoices</h1>
+                            <p class="text-slate-600 dark:text-slate-400 mt-1">Review invoices and download receipts for tax reporting purposes.</p>
+                        </div>
+
+                        <!-- Invoices list -->
+                        <div class="card bg-white dark:bg-slate-900 border border-gray-150 dark:border-slate-800 overflow-hidden shadow-sm">
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left border-collapse text-sm">
+                                    <thead>
+                                        <tr class="border-b border-gray-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/20 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                                            <th class="p-4">Invoice ID</th>
+                                            <th class="p-4">Billing Period</th>
+                                            <th class="p-4">Amount</th>
+                                            <th class="p-4">Date Paid</th>
+                                            <th class="p-4 text-right">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-150 dark:divide-slate-800">
+                                        <tr>
+                                            <td class="p-4 font-mono font-bold text-slate-500">INV-2026-004</td>
+                                            <td class="p-4">Jan 2026 Renewal</td>
+                                            <td class="p-4 font-semibold">$350.00</td>
+                                            <td class="p-4 text-slate-500">Jan 12, 2026</td>
+                                            <td class="p-4 text-right"><button onclick="showToast('Downloading INV-2026-004.pdf')" class="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500" title="Download PDF"><i data-lucide="download" class="w-4 h-4"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-4 font-mono font-bold text-slate-500">INV-2025-012</td>
+                                            <td class="p-4">Dec 2025 Renewal</td>
+                                            <td class="p-4 font-semibold">$350.00</td>
+                                            <td class="p-4 text-slate-500">Dec 12, 2025</td>
+                                            <td class="p-4 text-right"><button onclick="showToast('Downloading INV-2025-012.pdf')" class="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500" title="Download PDF"><i data-lucide="download" class="w-4 h-4"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-4 font-mono font-bold text-slate-500">INV-2025-011</td>
+                                            <td class="p-4">Nov 2025 Renewal</td>
+                                            <td class="p-4 font-semibold">$350.00</td>
+                                            <td class="p-4 text-slate-500">Nov 12, 2025</td>
+                                            <td class="p-4 text-right"><button onclick="showToast('Downloading INV-2025-011.pdf')" class="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500" title="Download PDF"><i data-lucide="download" class="w-4 h-4"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. NOTIFICATIONS VIEW -->
+                    <div id="view-notifications" class="dashboard-view hidden space-y-8">
+                        <div class="flex justify-between items-center flex-wrap gap-4">
+                            <div>
+                                <h1 class="heading-h2">Notifications</h1>
+                                <p class="text-slate-600 dark:text-slate-400 mt-1">Stay updated with coworking community events, room statuses, and billing updates.</p>
+                            </div>
+                            <button onclick="markAllNotificationsRead()" class="btn btn-outline border-gray-200 dark:border-slate-800 text-sm">Mark all read</button>
+                        </div>
+
+                        <!-- Notifications feed -->
+                        <div class="card bg-white dark:bg-slate-900 border border-gray-150 dark:border-slate-800 p-6 max-w-3xl space-y-4" id="notifications-container">
+                            <div class="flex gap-4 p-4 border border-rose-100 bg-rose-50/20 dark:border-rose-950/20 rounded-xl relative group notification-item" data-unread="true">
+                                <div class="w-8 h-8 rounded-full bg-rose-100 dark:bg-rose-950/30 text-rose-500 flex items-center justify-center shrink-0 mt-0.5"><i data-lucide="alert-circle" class="w-4.5 h-4.5"></i></div>
+                                <div><p class="font-bold text-slate-900 dark:text-white">Gigabit wifi maintenance schedule</p><p class="text-xs text-slate-500 mt-1">Wifi router diagnostics in Pod B scheduled tonight at 11:30 PM. Anticipate minor drops.</p></div>
+                                <span class="w-2.5 h-2.5 bg-rose-500 rounded-full absolute top-4 right-4"></span>
+                            </div>
+
+                            <div class="flex gap-4 p-4 border border-teal-150 bg-teal-50/10 dark:border-teal-950/20 rounded-xl relative group notification-item" data-unread="true">
+                                <div class="w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-950/30 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0 mt-0.5"><i data-lucide="check" class="w-4.5 h-4.5"></i></div>
+                                <div><p class="font-bold text-slate-900 dark:text-white">Workspace booking confirmed</p><p class="text-xs text-slate-500 mt-1">Focus Pod B booking slot confirmed for January 15 at 10:00 AM. Thank you!</p></div>
+                                <span class="w-2.5 h-2.5 bg-rose-500 rounded-full absolute top-4 right-4"></span>
+                            </div>
+
+                            <div class="flex gap-4 p-4 border border-amber-150 bg-amber-50/10 dark:border-amber-950/20 rounded-xl relative group notification-item" data-unread="true">
+                                <div class="w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-950/30 text-amber-500 flex items-center justify-center shrink-0 mt-0.5"><i data-lucide="sparkles" class="w-4.5 h-4.5"></i></div>
+                                <div><p class="font-bold text-slate-900 dark:text-white">Community Networking Breakfast</p><p class="text-xs text-slate-500 mt-1">Join the community breakfast event tomorrow at 8:00 AM. Main Cafe, Floor 1.</p></div>
+                                <span class="w-2.5 h-2.5 bg-rose-500 rounded-full absolute top-4 right-4"></span>
+                            </div>
+                        </div>
+                        
+                        <div id="notifications-empty" class="hidden text-center py-12 card max-w-3xl">
+                            <i data-lucide="bell-off" class="w-12 h-12 text-slate-300 mx-auto mb-4"></i>
+                            <h4 class="font-bold">No new notifications</h4>
+                        </div>
+                    </div>
+
+                    <!-- 8. PROFILE VIEW -->
+                    <div id="view-profile" class="dashboard-view hidden space-y-8">
+                        <div>
+                            <h1 class="heading-h2">Profile Settings</h1>
+                            <p class="text-slate-600 dark:text-slate-400 mt-1">Verify details, customize avatars, and manage office affiliations.</p>
+                        </div>
+
+                        <div class="card bg-white dark:bg-slate-900 border border-gray-150 dark:border-slate-800 p-6 max-w-3xl">
+                            <form id="profile-form" onsubmit="saveUserProfile(event)" class="space-y-6">
+                                <div class="flex items-center gap-6">
+                                    <img id="profile-form-avatar-preview" src="https://i.pravatar.cc/150?img=11" alt="Avatar" class="w-20 h-20 rounded-full border border-gray-250 dark:border-slate-800">
+                                    <div>
+                                        <h4 class="font-bold text-slate-900 dark:text-white">Profile Photo</h4>
+                                        <p class="text-xs text-slate-500 mt-1">Select an avatar theme or input custom image url.</p>
+                                        <input type="text" id="profile-avatar-url" value="https://i.pravatar.cc/150?img=11" class="input text-xs mt-2 py-1" onchange="document.getElementById('profile-form-avatar-preview').src = this.value">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-1">Full Name</label>
+                                        <input type="text" id="profile-name" value="John Doe" required class="input">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-1">Email Address</label>
+                                        <input type="email" id="profile-email" value="john@example.com" required class="input">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-1">Phone Number</label>
+                                        <input type="text" id="profile-phone" value="+1 (555) 019-2834" class="input">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-1">Job Title</label>
+                                        <input type="text" id="profile-job" value="Frontend Developer" class="input">
+                                    </div>
+                                </div>
+
+                                <div class="border-t border-gray-100 dark:border-slate-850 pt-4 flex justify-end">
+                                    <button type="submit" class="btn btn-primary px-6">Save Changes</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- 9. ACCOUNT SETTINGS VIEW -->
+                    <div id="view-account-settings" class="dashboard-view hidden space-y-8">
+                        <div>
+                            <h1 class="heading-h2">Account Settings</h1>
+                            <p class="text-slate-600 dark:text-slate-400 mt-1">Manage passwords, notifications preferences, and dashboard styles.</p>
+                        </div>
+
+                        <div class="card bg-white dark:bg-slate-900 border border-gray-150 dark:border-slate-800 p-6 max-w-3xl space-y-8">
+                            <!-- Change Password -->
+                            <div>
+                                <h3 class="font-bold text-lg mb-4 pb-1 border-b border-gray-100 dark:border-slate-850">Update Credentials</h3>
+                                <form onsubmit="event.preventDefault(); showToast('Password changed successfully!'); this.reset();" class="space-y-4">
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-1">Current Password</label>
+                                        <input type="password" required class="input placeholder:font-sans" placeholder="••••••••">
+                                    </div>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="block text-sm font-semibold mb-1">New Password</label>
+                                            <input type="password" required class="input placeholder:font-sans" placeholder="••••••••">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-semibold mb-1">Confirm New Password</label>
+                                            <input type="password" required class="input placeholder:font-sans" placeholder="••••••••">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-sm px-4">Update Password</button>
+                                </form>
+                            </div>
+
+                            <!-- Notification Toggles -->
+                            <div>
+                                <h3 class="font-bold text-lg mb-4 pb-1 border-b border-gray-100 dark:border-slate-850">Preference Dispatch</h3>
+                                <form onsubmit="event.preventDefault(); showToast('Preferences updated successfully!');" class="space-y-4">
+                                    <div class="space-y-3">
+                                        <label class="flex items-center gap-3 cursor-pointer">
+                                            <input type="checkbox" checked class="rounded text-primary focus:ring-primary w-4.5 h-4.5">
+                                            <div><p class="font-bold text-sm">Email Alerts</p><p class="text-xs text-slate-500">Invoice reminders, event invitations, newsletter updates</p></div>
+                                        </label>
+                                        <label class="flex items-center gap-3 cursor-pointer">
+                                            <input type="checkbox" checked class="rounded text-primary focus:ring-primary w-4.5 h-4.5">
+                                            <div><p class="font-bold text-sm">Browser Alerts</p><p class="text-xs text-slate-500">Booking confirmations, ticket replies, general ticks</p></div>
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-sm px-4">Save Preferences</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10. SUPPORT VIEW -->
+                    <div id="view-support" class="dashboard-view hidden space-y-8">
+                        <div>
+                            <h1 class="heading-h2">Help & Support</h1>
+                            <p class="text-slate-600 dark:text-slate-400 mt-1">Submit feedback or hardware maintenance reports directly to community team.</p>
+                        </div>
+
+                        <div class="card bg-white dark:bg-slate-900 border border-gray-150 dark:border-slate-800 p-6 max-w-3xl">
+                            <h3 class="font-bold text-lg mb-4 pb-1 border-b border-gray-150 dark:border-slate-850">Open Support Ticket</h3>
+                            <form id="support-ticket-form" onsubmit="submitSupportTicket(event)" class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-1">Issue Category</label>
+                                        <select id="support-category" class="select"><option>Infrastructure & Wifi</option><option>Comfort & Temperature</option><option>Billing & Invoices</option><option>Community & Keys</option></select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-semibold mb-1">Priority Level</label>
+                                        <select id="support-priority" class="select"><option>Low Priority</option><option>Medium Priority</option><option>High Priority</option></select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Subject Title</label>
+                                    <input type="text" id="support-subject" placeholder="Title" required class="input">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold mb-1">Detailed Message Description</label>
+                                    <textarea id="support-message" rows="4" placeholder="Brief details about your request..." required class="input resize-none py-2"></textarea>
+                                </div>
+                                <div class="flex justify-end pt-2">
+                                    <button type="submit" class="btn btn-primary px-6">Submit Ticket</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </main>
         </div>
@@ -360,6 +757,52 @@
     <script>
         // Initialize Icons
         lucide.createIcons();
+
+        // Theme Toggle is handled globally by layout.js
+
+        // 2. Client-Side Hash Routing & Active State Logic
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        const views = document.querySelectorAll('.dashboard-view');
+
+        function switchView(targetId) {
+            views.forEach(v => v.classList.add('hidden'));
+
+            const targetView = document.getElementById('view-' + targetId);
+            if (targetView) {
+                targetView.classList.remove('hidden');
+            }
+
+            sidebarLinks.forEach(link => {
+                if (link.getAttribute('data-target') === targetId) {
+                    link.className = "sidebar-link flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary font-medium transition-colors";
+                } else {
+                    link.className = "sidebar-link flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors";
+                }
+            });
+        }
+
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetId = link.getAttribute('data-target');
+                if (targetId) {
+                    switchView(targetId);
+                    toggleSidebar(false); // close mobile sidebar if open
+                }
+            });
+        });
+
+        // Initialize view based on URL hash
+        function initRouting() {
+            const hash = window.location.hash.substring(1);
+            if (hash && document.getElementById('view-' + hash)) {
+                switchView(hash);
+            } else {
+                switchView('overview');
+            }
+        }
+
+        window.addEventListener('hashchange', initRouting);
+        initRouting();
 
         // Sidebar Toggle Logic for Mobile
         const sidebar = document.getElementById('sidebar');
@@ -371,12 +814,11 @@
             if (show) {
                 sidebar.classList.remove('-translate-x-full');
                 overlay.classList.remove('hidden');
-                // Small delay to allow display:block to apply before animating opacity
                 setTimeout(() => overlay.classList.remove('opacity-0'), 10);
             } else {
                 sidebar.classList.add('-translate-x-full');
                 overlay.classList.add('opacity-0');
-                setTimeout(() => overlay.classList.add('hidden'), 300); // match duration
+                setTimeout(() => overlay.classList.add('hidden'), 300);
             }
         }
 
@@ -384,12 +826,241 @@
         closeBtn?.addEventListener('click', () => toggleSidebar(false));
         overlay?.addEventListener('click', () => toggleSidebar(false));
 
+        // 3. User Profile Update Logic
+        function saveUserProfile(e) {
+            e.preventDefault();
+            const n = document.getElementById('profile-name').value;
+            const email = document.getElementById('profile-email').value;
+            const avatar = document.getElementById('profile-avatar-url').value;
+            const job = document.getElementById('profile-job').value;
+
+            // Update local state details
+            document.getElementById('user-greeting-name').textContent = n.split(' ')[0];
+            document.getElementById('user-sidebar-name').textContent = n;
+            document.getElementById('user-sidebar-avatar').src = avatar;
+            
+            // Check for other headers profile pictures if any
+            const headerAvatar = document.querySelector('header img');
+            if (headerAvatar) headerAvatar.src = avatar;
+
+            showToast('Profile updated successfully!');
+        }
+
+        // 4. Cancel booking logic
+        function cancelBooking(id) {
+            // Remove from dashboard overview list
+            const overviewItem = document.getElementById('booking-item-' + id);
+            if (overviewItem) overviewItem.remove();
+
+            // Remove from My Bookings view
+            const bookingsCard = document.getElementById('booking-card-' + id);
+            if (bookingsCard) bookingsCard.remove();
+
+            showToast('Booking cancelled successfully.');
+
+            // If lists are empty, show empty states
+            const overviewList = document.getElementById('overview-bookings-list');
+            if (overviewList && overviewList.children.length === 0) {
+                document.getElementById('overview-bookings-empty').classList.remove('hidden');
+            }
+            const myBookingsList = document.getElementById('my-bookings-list');
+            if (myBookingsList && myBookingsList.children.length === 0) {
+                document.getElementById('my-bookings-empty').classList.remove('hidden');
+            }
+        }
+
+        // 5. Room Availability Interactive grid logic
+        const slotsData = {
+            boardroom: [
+                { time: '09:00 AM', status: 'available' },
+                { time: '10:00 AM', status: 'reserved' },
+                { time: '11:00 AM', status: 'reserved' },
+                { time: '12:00 PM', status: 'available' },
+                { time: '01:00 PM', status: 'available' },
+                { time: '02:00 PM', status: 'reserved' }, // John's current booking tomorrow
+                { time: '03:00 PM', status: 'available' },
+                { time: '04:00 PM', status: 'available' },
+                { time: '05:00 PM', status: 'available' },
+            ],
+            focuspod: [
+                { time: '09:00 AM', status: 'available' },
+                { time: '10:00 AM', status: 'available' },
+                { time: '11:00 AM', status: 'available' },
+                { time: '12:00 PM', status: 'available' },
+                { time: '01:00 PM', status: 'reserved' },
+                { time: '02:00 PM', status: 'available' },
+                { time: '03:00 PM', status: 'available' },
+                { time: '04:00 PM', status: 'reserved' },
+                { time: '05:00 PM', status: 'available' },
+            ]
+        };
+
+        let currentActiveRoom = 'boardroom';
+
+        function renderAvailabilityGrid() {
+            const grid = document.getElementById('availability-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+            
+            const roomName = currentActiveRoom === 'boardroom' ? 'The Boardroom' : 'Focus Pod B';
+            const slots = slotsData[currentActiveRoom];
+
+            slots.forEach((slot, index) => {
+                const card = document.createElement('div');
+                card.className = `p-4 border rounded-xl flex flex-col justify-between items-start gap-3 transition-colors ${
+                    slot.status === 'reserved' 
+                    ? 'border-gray-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/20 opacity-70' 
+                    : 'border-emerald-100 bg-emerald-50/10 dark:border-emerald-950/20 hover:border-emerald-500/50'
+                }`;
+
+                card.innerHTML = `
+                    <div class="w-full flex justify-between items-center">
+                        <span class="font-bold text-sm text-slate-800 dark:text-slate-200">${slot.time}</span>
+                        <span class="badge ${
+                            slot.status === 'reserved' 
+                            ? 'bg-gray-100 text-gray-600 dark:bg-slate-800 dark:text-slate-400' 
+                            : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400'
+                        } border-none text-[10px] font-bold px-2 py-0.5">${slot.status === 'reserved' ? 'Reserved' : 'Available'}</span>
+                    </div>
+                    ${
+                        slot.status === 'reserved'
+                        ? `<p class="text-xs text-slate-400">Not bookable today</p>`
+                        : `<button onclick="bookSlot('${currentActiveRoom}', ${index})" class="btn btn-xs btn-primary px-3 self-stretch mt-1">Book Slot</button>`
+                    }
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function changeAvailabilityRoom(val) {
+            currentActiveRoom = val;
+            renderAvailabilityGrid();
+        }
+
+        function bookSlot(roomKey, slotIndex) {
+            const slot = slotsData[roomKey][slotIndex];
+            slot.status = 'reserved';
+            showToast(`Successfully booked ${roomKey === 'boardroom' ? 'The Boardroom' : 'Focus Pod B'} at ${slot.time}!`);
+            renderAvailabilityGrid();
+
+            // Append to upcoming bookings lists dynamically!
+            const list = document.getElementById('my-bookings-list');
+            const overviewList = document.getElementById('overview-bookings-list');
+            const newId = Date.now();
+            const rName = roomKey === 'boardroom' ? 'The Boardroom' : 'Focus Pod B';
+            const fLoc = roomKey === 'boardroom' ? 'Floor 2, Room A' : 'Floor 1, Pods Section';
+
+            const itemHtml = `
+                <div id="booking-card-${newId}" class="p-4 border border-gray-100 dark:border-slate-800 rounded-xl hover:border-primary/20 transition-all flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex flex-col items-center justify-center font-bold">
+                            <span class="text-[10px] uppercase">Today</span>
+                            <span class="text-sm leading-none">Book</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">${rName}</h4>
+                            <p class="text-xs text-slate-500 flex items-center gap-1 mt-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> ${slot.time}</p>
+                            <p class="text-xs text-slate-500 flex items-center gap-1 mt-0.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> ${fLoc}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                        <span class="badge bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 border-none font-bold text-xs">Confirmed</span>
+                        <button onclick="cancelBooking(${newId})" class="btn btn-outline btn-sm text-rose-500 border-rose-500 hover:bg-rose-500 hover:text-white px-3">Cancel</button>
+                    </div>
+                </div>
+            `;
+
+            const overviewHtml = `
+                <div id="booking-item-${newId}" class="flex flex-col sm:flex-row sm:items-center justify-between p-4 border border-gray-100 dark:border-slate-800 rounded-xl hover:border-primary/30 transition-colors gap-4">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex flex-col items-center justify-center shrink-0">
+                            <span class="text-xs font-bold uppercase">Today</span>
+                            <span class="text-sm leading-none">Book</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">${rName}</h4>
+                            <p class="text-sm text-slate-500 flex items-center gap-1 mt-1">
+                                <i data-lucide="clock" class="w-3.5 h-3.5"></i> ${slot.time}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 self-end sm:self-auto">
+                        <span class="badge bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 border-none font-bold">Confirmed</span>
+                        <button onclick="cancelBooking(${newId})" class="p-2 text-slate-400 hover:text-rose-500 transition-colors" title="Cancel Booking"><i data-lucide="x" class="w-4 h-4"></i></button>
+                    </div>
+                </div>
+            `;
+
+            if (list) {
+                list.insertAdjacentHTML('afterbegin', itemHtml);
+                document.getElementById('my-bookings-empty').classList.add('hidden');
+            }
+            if (overviewList) {
+                overviewList.insertAdjacentHTML('afterbegin', overviewHtml);
+                document.getElementById('overview-bookings-empty').classList.add('hidden');
+            }
+            lucide.createIcons();
+        }
+
+        renderAvailabilityGrid();
+
+        // 6. Submit Support Ticket Logic
+        function submitSupportTicket(e) {
+            e.preventDefault();
+            const cat = document.getElementById('support-category').value;
+            const prio = document.getElementById('support-priority').value;
+            const sub = document.getElementById('support-subject').value;
+            const msg = document.getElementById('support-message').value;
+
+            showToast('Support ticket submitted successfully!');
+            document.getElementById('support-ticket-form').reset();
+        }
+
+        // 7. Notification Badges and Feed Read Logic
+        let unreadNotificationsCount = 3;
+        function markAllNotificationsRead() {
+            const badge = document.getElementById('notifications-sidebar-badge');
+            if (badge) badge.classList.add('hidden');
+
+            const unreads = document.querySelectorAll('.notification-item');
+            unreads.forEach(item => {
+                item.setAttribute('data-unread', 'false');
+                const dot = item.querySelector('span.bg-rose-500');
+                if (dot) dot.remove();
+            });
+
+            unreadNotificationsCount = 0;
+            showToast('All notifications marked as read.');
+        }
+
         // Logout
         function logout(e) {
             e.preventDefault();
             localStorage.removeItem('user');
             alert('You have been logged out');
             window.location.href = 'login.html';
+        }
+
+        function showToast(msg) {
+            const container = document.body;
+            let c = document.getElementById('toast-container');
+            if (!c) {
+                c = document.createElement('div');
+                c.id = 'toast-container';
+                c.className = 'fixed bottom-5 right-5 z-[100] flex flex-col gap-3 pointer-events-none max-w-sm w-full';
+                document.body.appendChild(c);
+            }
+            const t = document.createElement('div');
+            t.className = 'p-3 bg-slate-800 text-white rounded-lg shadow-lg pointer-events-auto transition-all transform translate-y-2 opacity-0 duration-300';
+            t.textContent = msg;
+            c.appendChild(t);
+            setTimeout(() => {
+                t.classList.remove('translate-y-2', 'opacity-0');
+            }, 10);
+            setTimeout(() => {
+                t.classList.add('translate-y-2', 'opacity-0');
+                setTimeout(() => t.remove(), 300);
+            }, 3000);
         }
     </script>
 </body>

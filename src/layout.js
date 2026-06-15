@@ -154,19 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="inline dark:hidden">Dark Mode</span>
                     </button>
                 </div>
-
-                <div class="border-t border-gray-200 dark:border-slate-700 my-2 pt-2">
-                    <p class="px-4 py-1 text-xs font-semibold text-slate-400 uppercase tracking-wider">Account</p>
-                    <a href="${prefix}pages/login.html"
-                        class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-2"><i
-                            data-lucide="log-in" class="w-4 h-4 text-slate-400"></i> Login / Sign Up</a>
-                    <a href="${prefix}pages/admin-dashboard.html"
-                        class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-2"><i
-                            data-lucide="shield" class="w-4 h-4 text-slate-400"></i> Admin Dashboard</a>
-                    <a href="${prefix}pages/user-dashboard.html"
-                        class="block px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-2"><i
-                            data-lucide="layout-dashboard" class="w-4 h-4 text-slate-400"></i> User Dashboard</a>
-                </div>
             </div>
         </div>
     </nav>
