@@ -648,10 +648,6 @@ video {
   right: 0;
 }
 
-.right-1{
-  right: 0.25rem;
-}
-
 .right-2{
   right: 0.5rem;
 }
@@ -666,10 +662,6 @@ video {
 
 .top-0{
   top: 0;
-}
-
-.top-1{
-  top: 0.25rem;
 }
 
 .top-24{
@@ -3496,11 +3488,6 @@ a.link:hover{
   border-color: rgb(30 41 59 / var(--tw-border-opacity));
 }
 
-:is(.dark .dark\:border-slate-900){
-  --tw-border-opacity: 1;
-  border-color: rgb(15 23 42 / var(--tw-border-opacity));
-}
-
 :is(.dark .dark\:border-teal-950\/20){
   border-color: rgb(4 47 46 / 0.2);
 }
@@ -3943,6 +3930,14 @@ a.link:hover{
 @media (min-width: 1024px){
   .lg\:col-span-2{
     grid-column: span 2 / span 2;
+  }
+
+  .lg\:flex{
+    display: flex;
+  }
+
+  .lg\:hidden{
+    display: none;
   }
 
   .lg\:grid-cols-2{

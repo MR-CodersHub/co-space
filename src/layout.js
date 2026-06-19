@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </a>
 
             <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center gap-8">
+            <div class="hidden lg:flex items-center gap-8">
                 <a href="${prefix}index.html"
                     class="${currentPage === 'home' ? 'text-primary font-semibold' : 'text-slate-600 dark:text-slate-300 hover:text-primary'} transition-colors">Home</a>
                 <a href="${prefix}pages/home.html"
@@ -66,14 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="flex items-center gap-4">
                 <!-- RTL Toggle -->
                 <button id="rtl-toggle"
-                    class="hidden md:flex p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors focus-ring"
+                    class="hidden lg:flex p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors focus-ring"
                     aria-label="Toggle RTL direction" title="Toggle RTL">
                     <i data-lucide="align-right" class="w-5 h-5 text-slate-600 dark:text-slate-300"></i>
                 </button>
 
                 <!-- Theme Toggle -->
                 <button id="theme-toggle"
-                    class="hidden md:flex p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors focus-ring"
+                    class="hidden lg:flex p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors focus-ring"
                     aria-label="Toggle dark mode" title="Toggle theme">
                     <i data-lucide="moon" class="w-5 h-5 hidden dark:block text-slate-600 dark:text-slate-300"></i>
                     <i data-lucide="sun" class="w-5 h-5 dark:hidden text-slate-600 dark:text-slate-300"></i>
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-btn"
-                    class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 focus-ring"
+                    class="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 focus-ring"
                     aria-label="Toggle menu" aria-expanded="false">
                     <svg class="w-6 h-6 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden absolute top-full left-0 w-full md:hidden border-t border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-800 shadow-xl z-40">
+            class="hidden absolute top-full left-0 w-full lg:hidden border-t border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-800 shadow-xl z-40">
             <div class="container-custom py-4 space-y-2">
                 <a href="${prefix}index.html"
                     class="block px-4 py-2 rounded-lg ${currentPage === 'home' ? 'bg-gray-200 dark:bg-slate-700 text-primary font-medium' : 'hover:bg-gray-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300'} transition-colors">Home</a>
